@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ploosqva</RootNamespace>
+    <AssemblyName>Ploosqva</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Ploosqva.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Db4objects.Db4o, Version=7.4.106.13438, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Db4objects.Db4o.dll</HintPath>
+    </Reference>
+    <Reference Include="Gaia.WebWidgets, Version=3.6.834.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Gaia.WebWidgets.dll</HintPath>
+    </Reference>
+    <Reference Include="Gaia.WebWidgets.Effects, Version=3.6.834.1, Culture=neutral, PublicKeyToken=e3fc7cc7a1b1114a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Gaia.WebWidgets.Effects.dll</HintPath>
+    </Reference>
+    <Reference Include="Gaia.WebWidgets.Extensions, Version=3.6.834.1, Culture=neutral, PublicKeyToken=e3fc7cc7a1b1114a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Gaia.WebWidgets.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Gouda.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Gouda.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageManipulation, Version=1.0.3242.37438, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\ImageManipulation.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.1.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Winista.MimeDetect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Winista.MimeDetect.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassUtils\EnumLocalizer.cs" />
+    <Compile Include="ClassUtils\ResourcePathAttribute.cs" />
+    <Compile Include="ClassUtils\String\RandomString.cs" />
+    <Compile Include="DbUtils\Db4o\AutoIncrementFields.cs" />
+    <Compile Include="GeneralUtils\ISettingsManager.cs" />
+    <Compile Include="ImageUtils\PdfToImage.cs" />
+    <Compile Include="GeneralUtils\ShortGuid.cs" />
+    <Compile Include="GeneralUtils\XmlSettingsManager.cs" />
+    <Compile Include="ImageUtils\CaptchaImage.cs" />
+    <Compile Include="ImageUtils\ImageResizer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\DESCryptography.cs" />
+    <Compile Include="WebUtils\Controls\GaiaAjaxPdfViewer.cs" />
+    <Compile Include="WebUtils\Handlers\CaptchaImageHandler.cs" />
+    <Compile Include="WebUtils\Communication\IEmailSender.cs" />
+    <Compile Include="WebUtils\Communication\LocalhostEmailSender.cs" />
+    <Compile Include="WebUtils\Controls\CaptchaImageControl.cs" />
+    <Compile Include="WebUtils\Controls\PdfViewerControlBase.cs" />
+    <Compile Include="WebUtils\Controls\ValidationControl.cs" />
+    <Compile Include="WebUtils\JavascriptAlert.cs" />
+    <Compile Include="WebUtils\Handlers\PdfPageImageHandler.cs" />
+    <Compile Include="WebUtils\Platnosci.pl\CharacterEncoding.cs" />
+    <Compile Include="WebUtils\Platnosci.pl\InvalidParamException.cs" />
+    <Compile Include="WebUtils\Platnosci.pl\OnlinePayment.cs" />
+    <Compile Include="WebUtils\Communication\RemotePost.cs" />
+    <Compile Include="WebUtils\Security\PasswordHasher.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ImageUtils\XML\mime-types.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FUA\FUA.csproj">
+      <Project>{BE2E39E8-DBC2-4933-9376-96D393C86588}</Project>
+      <Name>FUA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

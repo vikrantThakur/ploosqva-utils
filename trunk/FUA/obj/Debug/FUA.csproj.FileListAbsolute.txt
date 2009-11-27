@@ -1,0 +1,7 @@
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\FUA\bin\Debug\FUA.dll
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\FUA\bin\Debug\FUA.pdb
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\FUA\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\FUA\obj\Debug\FUA.dll
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\FUA\obj\Debug\FUA.pdb
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\Output\Debug\FUA.dll
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\Output\Debug\FUA.pdb

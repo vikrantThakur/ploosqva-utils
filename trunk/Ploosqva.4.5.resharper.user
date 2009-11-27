@@ -1,0 +1,892 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BE2E39E8-DBC2-4933-9376-96D393C86588/f:PostedFileAJAX.cs" caret="2755" fromTop="10" />
+      <File id="BE2E39E8-DBC2-4933-9376-96D393C86588/f:FileUploaderAJAX_Actions.cs" caret="4438" fromTop="39" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:GeneralUtils/f:ISettingsManager.cs" caret="0" fromTop="0" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/f:JavascriptAlert.cs" caret="0" fromTop="0" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/d:Communication/f:IEmailSender.cs" caret="0" fromTop="0" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:Security/f:DESCryptography.cs" caret="1702" fromTop="21" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/d:Communication/f:LocalhostEmailSender.cs" caret="1121" fromTop="30" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:ClassUtils/f:ResourcePathAttribute.cs" caret="0" fromTop="0" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:GeneralUtils/f:ShortGuid.cs" caret="2363" fromTop="91" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:DbUtils/d:Db4o/f:AutoIncrementFields.cs" caret="0" fromTop="0" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/d:Platnosci.pl/f:CharacterEncoding.cs" caret="436" fromTop="18" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/d:Communication/f:RemotePost.cs" caret="1433" fromTop="31" />
+      <File id="BE2E39E8-DBC2-4933-9376-96D393C86588/f:FileUploaderAJAX.cs" caret="1777" fromTop="52" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:ClassUtils/f:EnumLocalizer.cs" caret="2731" fromTop="50" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:ClassUtils/d:String/f:RandomString.cs" caret="0" fromTop="0" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:ImageUtils/f:CaptchaImage.cs" caret="0" fromTop="0" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/d:Controls/f:ValidationControl.cs" caret="0" fromTop="0" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/d:Controls/f:CaptchaImageControl.cs" caret="2442" fromTop="70" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/d:Handlers/f:PdfPageImageHandler.cs" caret="1472" fromTop="21" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/d:Handlers/f:CaptchaImageHandler.cs" caret="0" fromTop="0" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/d:Controls/f:PdfViewerControlBase.cs" caret="5492" fromTop="32" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:WebUtils/d:Controls/f:GaiaAjaxPdfViewer.cs" caret="5278" fromTop="173" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Controller.cs" caret="307" fromTop="15" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oEventHandler.cs" caret="121" fromTop="2" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oEventHandler.cs" caret="420" fromTop="12" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oHttpModule.cs" caret="887" fromTop="8" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oServerModule.cs" caret="0" fromTop="0" />
+      <File id="FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51/d:GeneralUtils/f:XmlSettingsManager.cs" caret="923" fromTop="15" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:DbFacade/f:FacadeBase.cs" caret="0" fromTop="0" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:FormsBase/f:Db4oEnabledPageBase.cs" caret="578" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Controller.cs" caret="964" fromTop="30" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Controller.cs" caret="106" fromTop="12" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Controller.cs" caret="149" fromTop="14" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Controller.cs" caret="959" fromTop="40" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Controller.cs" caret="0" fromTop="0" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Controller.cs" caret="856" fromTop="23" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Controller.cs" caret="628" fromTop="15" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Controller.cs" caret="307" fromTop="14" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oServerModule.cs" caret="3961" fromTop="84" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oEventHandler.cs" caret="13" fromTop="0" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oEventHandler.cs" caret="318" fromTop="11" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oServerModule.cs" caret="238" fromTop="7" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oServerModule.cs" caret="3131" fromTop="49" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oServerModule.cs" caret="3784" fromTop="54" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oEventHandler.cs" caret="114" fromTop="2" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oServerModule.cs" caret="781" fromTop="13" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oHttpModule.cs" caret="941" fromTop="26" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oHttpModule.cs" caret="3391" fromTop="17" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oHttpModule.cs" caret="2662" fromTop="0" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oHttpModule.cs" caret="1269" fromTop="26" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oServerModule.cs" caret="781" fromTop="17" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oServerModule.cs" caret="3584" fromTop="55" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oEventHandler.cs" caret="140" fromTop="5" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oEventHandler.cs" caret="436" fromTop="12" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oEventHandler.cs" caret="420" fromTop="12" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oServerModule.cs" caret="3584" fromTop="36" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oHttpModule.cs" caret="2429" fromTop="59" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oHttpModule.cs" caret="757" fromTop="22" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:Database/f:Db4oHttpModule.cs" caret="940" fromTop="1" />
+      <File id="320C4E32-039B-4CDB-9A35-E5D42FE7BD8C/d:FormsBase/f:Db4oEnabledPageBase.cs" caret="575" fromTop="14" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="override" priority="34" />
+      <Item value="string" priority="88" />
+      <Item value="value" priority="26" />
+      <Item value="resourceManager" priority="3" />
+      <Item value="new" priority="67" />
+      <Item value="ResourceManager" priority="1" />
+      <Item value="typeof" priority="5" />
+      <Item value="return" priority="55" />
+      <Item value="public" priority="69" />
+      <Item value="EnumLocalizer" priority="4" />
+      <Item value="resourceKey" priority="4" />
+      <Item value="virtual" priority="1" />
+      <Item value="base" priority="8" />
+      <Item value="this" priority="8" />
+      <Item value="resourcePath" priority="2" />
+      <Item value="System" priority="4" />
+      <Item value="Reflection" priority="0" />
+      <Item value="MemberInfo" priority="1" />
+      <Item value="Attribute" priority="0" />
+      <Item value="ResourcePathAttribute" priority="3" />
+      <Item value="Path" priority="6" />
+      <Item value="if" priority="53" />
+      <Item value="attributes" priority="2" />
+      <Item value="Length" priority="1" />
+      <Item value="else" priority="3" />
+      <Item value="String" priority="5" />
+      <Item value="e" priority="2" />
+      <Item value="static" priority="10" />
+      <Item value="Type" priority="2" />
+      <Item value="List" priority="0" />
+      <Item value="List&lt;string&gt;" priority="1" />
+      <Item value="for" priority="1" />
+      <Item value="foreach" priority="5" />
+      <Item value="Enum" priority="4" />
+      <Item value="enumType" priority="0" />
+      <Item value="values" priority="1" />
+      <Item value="object" priority="6" />
+      <Item value="Convert" priority="5" />
+      <Item value="name" priority="0" />
+      <Item value="try" priority="4" />
+      <Item value="catch" priority="3" />
+      <Item value="throw" priority="11" />
+      <Item value="Exception" priority="4" />
+      <Item value="private" priority="43" />
+      <Item value="AutoincrementIdBase" priority="0" />
+      <Item value="int" priority="28" />
+      <Item value="id" priority="3" />
+      <Item value="AutoincrementBase" priority="0" />
+      <Item value="client" priority="0" />
+      <Item value="_ref" priority="0" />
+      <Item value="null" priority="12" />
+      <Item value="true" priority="10" />
+      <Item value="false" priority="6" />
+      <Item value="set" priority="1" />
+      <Item value="T" priority="4" />
+      <Item value="EnumType" priority="4" />
+      <Item value="resource" priority="2" />
+      <Item value="Dictionary" priority="0" />
+      <Item value="KeyValuePair" priority="0" />
+      <Item value="break" priority="5" />
+      <Item value="ConvertTo" priority="0" />
+      <Item value="const" priority="0" />
+      <Item value="Environment" priority="1" />
+      <Item value="Web" priority="2" />
+      <Item value="UI" priority="1" />
+      <Item value="WebControls" priority="0" />
+      <Item value="CompositeControl" priority="5" />
+      <Item value="void" priority="13" />
+      <Item value="Panel" priority="9" />
+      <Item value="pValidationSummary" priority="7" />
+      <Item value="litValidationSummary" priority="2" />
+      <Item value="Literal" priority="1" />
+      <Item value="errorsList" priority="3" />
+      <Item value="HtmlGenericControl" priority="3" />
+      <Item value="ForeColor" priority="1" />
+      <Item value="Controls" priority="8" />
+      <Item value="Text" priority="2" />
+      <Item value="bool" priority="10" />
+      <Item value="list" priority="2" />
+      <Item value="ViewState" priority="16" />
+      <Item value="IsValid" priority="6" />
+      <Item value="Visible" priority="1" />
+      <Item value="WebWidgets" priority="11" />
+      <Item value="EnsureChildControls" priority="0" />
+      <Item value="textBox" priority="3" />
+      <Item value="CheckBox" priority="0" />
+      <Item value="ValidationDataType" priority="3" />
+      <Item value="s" priority="0" />
+      <Item value="WebControl" priority="3" />
+      <Item value="method" priority="1" />
+      <Item value="validatedControl" priority="3" />
+      <Item value="Validate" priority="4" />
+      <Item value="cBox" priority="1" />
+      <Item value="errorText" priority="3" />
+      <Item value="delegate" priority="3" />
+      <Item value="ValidationMethod" priority="0" />
+      <Item value="TextBox" priority="5" />
+      <Item value="ValidationCompareOperator" priority="1" />
+      <Item value="switch" priority="4" />
+      <Item value="compareOperator" priority="3" />
+      <Item value="case" priority="5" />
+      <Item value="dataType" priority="2" />
+      <Item value="left" priority="4" />
+      <Item value="controlToValidate" priority="10" />
+      <Item value="right" priority="2" />
+      <Item value="controlToCompare" priority="1" />
+      <Item value="result" priority="10" />
+      <Item value="Int32" priority="2" />
+      <Item value="out" priority="6" />
+      <Item value="NotImplementedException" priority="1" />
+      <Item value="double" priority="1" />
+      <Item value="Double" priority="2" />
+      <Item value="DateTime" priority="1" />
+      <Item value="CompareStrings" priority="0" />
+      <Item value="CompareIntegers" priority="0" />
+      <Item value="CompareCurrencies" priority="0" />
+      <Item value="CompareDoubles" priority="0" />
+      <Item value="leftInt" priority="0" />
+      <Item value="regularExpression" priority="1" />
+      <Item value="RegularExpressions" priority="1" />
+      <Item value="Regex" priority="1" />
+      <Item value="errorMessage" priority="0" />
+      <Item value="regex" priority="0" />
+      <Item value="ListControl" priority="0" />
+      <Item value="idsValidated" priority="1" />
+      <Item value="control" priority="0" />
+      <Item value="customValidationMethod" priority="0" />
+      <Item value="class" priority="0" />
+      <Item value="StringDictionary" priority="2" />
+      <Item value="RemotePost" priority="2" />
+      <Item value="Url" priority="2" />
+      <Item value="url" priority="1" />
+      <Item value="Method" priority="0" />
+      <Item value="NameValueCollection" priority="0" />
+      <Item value="FormName" priority="0" />
+      <Item value="formName" priority="0" />
+      <Item value="Uri" priority="1" />
+      <Item value="params" priority="0" />
+      <Item value="Dictionary&lt;Type,int&gt;" priority="0" />
+      <Item value="AutoIncrementField" priority="4" />
+      <Item value="var" priority="1" />
+      <Item value="db" priority="9" />
+      <Item value="self" priority="3" />
+      <Item value="autoIncrement" priority="5" />
+      <Item value="countedType" priority="1" />
+      <Item value="ids" priority="3" />
+      <Item value="type" priority="3" />
+      <Item value="customIncrement" priority="1" />
+      <Item value="uint" priority="0" />
+      <Item value="short" priority="1" />
+      <Item value="Label" priority="0" />
+      <Item value="ValidationControl" priority="0" />
+      <Item value="sealed" priority="0" />
+      <Item value="interface" priority="1" />
+      <Item value="IEmailSender" priority="0" />
+      <Item value="MailAddress" priority="0" />
+      <Item value="MailMessage" priority="0" />
+      <Item value="SmtpClient" priority="1" />
+      <Item value="SimpleEmailSender" priority="0" />
+      <Item value="Port" priority="0" />
+      <Item value="smtpClient" priority="0" />
+      <Item value="lastException" priority="1" />
+      <Item value="ex" priority="1" />
+      <Item value="lastExceptionStackTrace" priority="1" />
+      <Item value="ISettingsManager" priority="0" />
+      <Item value="GetValue" priority="0" />
+      <Item value="settingKey" priority="1" />
+      <Item value="SetValue" priority="0" />
+      <Item value="XmlSettingsManager" priority="6" />
+      <Item value="path" priority="4" />
+      <Item value="CreateConfigFile" priority="0" />
+      <Item value="language" priority="0" />
+      <Item value="basePath" priority="0" />
+      <Item value="Directory" priority="2" />
+      <Item value="FileInfo" priority="0" />
+      <Item value="file" priority="4" />
+      <Item value="File" priority="3" />
+      <Item value="stream" priority="5" />
+      <Item value="FileStream" priority="0" />
+      <Item value="FileMode" priority="0" />
+      <Item value="HttpResponse" priority="5" />
+      <Item value="useCurrent" priority="0" />
+      <Item value="HttpRequest" priority="0" />
+      <Item value="HttpRuntime" priority="0" />
+      <Item value="HttpContext" priority="3" />
+      <Item value="msg" priority="0" />
+      <Item value="Attachment" priority="0" />
+      <Item value="attachmentStreams" priority="0" />
+      <Item value="byte" priority="2" />
+      <Item value="key" priority="1" />
+      <Item value="iV" priority="0" />
+      <Item value="input" priority="0" />
+      <Item value="GeneralUtils" priority="0" />
+      <Item value="pos_id" priority="3" />
+      <Item value="paramName" priority="1" />
+      <Item value="pos_auth_key" priority="2" />
+      <Item value="InvalidParamException" priority="4" />
+      <Item value="amount" priority="3" />
+      <Item value="desc" priority="2" />
+      <Item value="ThreadStaticAttribute" priority="0" />
+      <Item value="first_name" priority="3" />
+      <Item value="last_name" priority="3" />
+      <Item value="email" priority="4" />
+      <Item value="client_ip" priority="3" />
+      <Item value="CharacterEncoding" priority="0" />
+      <Item value="PostUrlBase" priority="1" />
+      <Item value="encoding" priority="0" />
+      <Item value="HttpPostMethod" priority="0" />
+      <Item value="paymentPost" priority="10" />
+      <Item value="Pay_type" priority="0" />
+      <Item value="Order_id" priority="0" />
+      <Item value="Desc2" priority="0" />
+      <Item value="TrsDesc" priority="0" />
+      <Item value="Street" priority="0" />
+      <Item value="Post_code" priority="0" />
+      <Item value="Country" priority="0" />
+      <Item value="PaybackLogin" priority="0" />
+      <Item value="PostPayType" priority="1" />
+      <Item value="PostOrderId" priority="0" />
+      <Item value="PostDesc2" priority="0" />
+      <Item value="PostPostCode" priority="1" />
+      <Item value="PostJs" priority="0" />
+      <Item value="PostLanguage" priority="0" />
+      <Item value="PostPhone" priority="0" />
+      <Item value="PostCountry" priority="0" />
+      <Item value="PostCity" priority="0" />
+      <Item value="PostStreetHn" priority="0" />
+      <Item value="PostStreetAn" priority="0" />
+      <Item value="PostStreet" priority="0" />
+      <Item value="PostTrsDesc" priority="0" />
+      <Item value="Amount" priority="1" />
+      <Item value="float" priority="0" />
+      <Item value="Math" priority="0" />
+      <Item value="Desc" priority="1" />
+      <Item value="FirstName" priority="1" />
+      <Item value="LastName" priority="2" />
+      <Item value="Email" priority="1" />
+      <Item value="ClientIp" priority="0" />
+      <Item value="PosId" priority="1" />
+      <Item value="PosAuthKey" priority="0" />
+      <Item value="session_id" priority="0" />
+      <Item value="OnlinePayment" priority="0" />
+      <Item value="posId" priority="0" />
+      <Item value="posAuthKey" priority="1" />
+      <Item value="firstName" priority="0" />
+      <Item value="postUrl" priority="1" />
+      <Item value="Post" priority="0" />
+      <Item value="writer" priority="12" />
+      <Item value="HtmlTextWriterAttribute" priority="0" />
+      <Item value="HtmlTextWriterTag" priority="2" />
+      <Item value="ImageButton" priority="4" />
+      <Item value="AlternateText" priority="2" />
+      <Item value="OnClick" priority="0" />
+      <Item value="Click" priority="4" />
+      <Item value="INamingContainer" priority="1" />
+      <Item value="inputText" priority="9" />
+      <Item value="ImageUrl" priority="1" />
+      <Item value="CaptchaUrl" priority="1" />
+      <Item value="ID" priority="1" />
+      <Item value="CaptchaImage" priority="2" />
+      <Item value="ci" priority="5" />
+      <Item value="context" priority="17" />
+      <Item value="IPostBackDataHandler" priority="1" />
+      <Item value="postCollection" priority="2" />
+      <Item value="text" priority="0" />
+      <Item value="RandomString" priority="1" />
+      <Item value="allowedChars" priority="4" />
+      <Item value="sBuilder" priority="2" />
+      <Item value="Random" priority="0" />
+      <Item value="StringBuilder" priority="0" />
+      <Item value="i" priority="1" />
+      <Item value="length" priority="0" />
+      <Item value="char" priority="0" />
+      <Item value="rand" priority="0" />
+      <Item value="allowedNum" priority="0" />
+      <Item value="nextChar" priority="0" />
+      <Item value="sbyte" priority="0" />
+      <Item value="ClassUtils" priority="0" />
+      <Item value="textLength" priority="0" />
+      <Item value="SetDimensions" priority="0" />
+      <Item value="width" priority="3" />
+      <Item value="height" priority="4" />
+      <Item value="GenerateImage" priority="0" />
+      <Item value="RequestNotificationStatus" priority="0" />
+      <Item value="len" priority="0" />
+      <Item value="Width" priority="2" />
+      <Item value="Height" priority="0" />
+      <Item value="Guid" priority="6" />
+      <Item value="CacheKey" priority="10" />
+      <Item value="guid" priority="0" />
+      <Item value="g" priority="1" />
+      <Item value="TimeSpan" priority="0" />
+      <Item value="CaptchaImageControl_Click" priority="0" />
+      <Item value="postDataKey" priority="0" />
+      <Item value="TrackViewState" priority="0" />
+      <Item value="IButtonControl" priority="9" />
+      <Item value="TButton" priority="0" />
+      <Item value="Image" priority="12" />
+      <Item value="PdfViewerControl" priority="1" />
+      <Item value="Repeater" priority="0" />
+      <Item value="event" priority="1" />
+      <Item value="btnShowViewer" priority="1" />
+      <Item value="showButton" priority="0" />
+      <Item value="btnClose" priority="1" />
+      <Item value="closeButton" priority="0" />
+      <Item value="btnPrev" priority="6" />
+      <Item value="prevButton" priority="0" />
+      <Item value="btnNext" priority="10" />
+      <Item value="nextButton" priority="0" />
+      <Item value="Unit" priority="0" />
+      <Item value="imgDocumentPage" priority="7" />
+      <Item value="pageImage" priority="7" />
+      <Item value="as" priority="4" />
+      <Item value="iTextSharp" priority="0" />
+      <Item value="pdf" priority="0" />
+      <Item value="PdfReader" priority="0" />
+      <Item value="PdfDocPath" priority="7" />
+      <Item value="CurrentPage" priority="8" />
+      <Item value="Encoding" priority="0" />
+      <Item value="document" priority="3" />
+      <Item value="originalPage" priority="0" />
+      <Item value="page" priority="7" />
+      <Item value="tempFile" priority="8" />
+      <Item value="Bitmap" priority="4" />
+      <Item value="PdfViewerControlBase" priority="0" />
+      <Item value="Gaia" priority="7" />
+      <Item value="pageNum" priority="3" />
+      <Item value="encodedPath" priority="1" />
+      <Item value="AppDomain" priority="0" />
+      <Item value="finally" priority="0" />
+      <Item value="sourceFile" priority="2" />
+      <Item value="FileStyleUriParser" priority="1" />
+      <Item value="Gouda" priority="0" />
+      <Item value="Api" priority="0" />
+      <Item value="Ghostscript" priority="0" />
+      <Item value="instance" priority="0" />
+      <Item value="cacheKey" priority="2" />
+      <Item value="Page" priority="9" />
+      <Item value="PagesCount" priority="2" />
+      <Item value="outputPath" priority="2" />
+      <Item value="PdfToImage" priority="0" />
+      <Item value="Control" priority="0" />
+      <Item value="pager" priority="4" />
+      <Item value="HtmlTextWriterStyle" priority="0" />
+      <Item value="NewsStyleUriParser" priority="0" />
+      <Item value="FileLoadException" priority="0" />
+      <Item value="ArgumentNullException" priority="1" />
+      <Item value="AspectClickable" priority="0" />
+      <Item value="AspectKey" priority="9" />
+      <Item value="protected" priority="2" />
+      <Item value="IncrementPage" priority="1" />
+      <Item value="keyPress" priority="0" />
+      <Item value="IFilter" priority="0" />
+      <Item value="IFilterResolutionService" priority="0" />
+      <Item value="next" priority="0" />
+      <Item value="DecrementPage" priority="1" />
+      <Item value="sender" priority="2" />
+      <Item value="EventArgs" priority="0" />
+      <Item value="changePage" priority="0" />
+      <Item value="ChangePage" priority="0" />
+      <Item value="btnDownload" priority="2" />
+      <Item value="DownloadPdfDocument" priority="0" />
+      <Item value="LinkButton" priority="0" />
+      <Item value="NextButtonImageUrl" priority="0" />
+      <Item value="PrevButtonImageUrl" priority="0" />
+      <Item value="AttributeUsage" priority="0" />
+      <Item value="ComponentModel" priority="0" />
+      <Item value="Design" priority="0" />
+      <Item value="DownloadText" priority="0" />
+      <Item value="PrevText" priority="0" />
+      <Item value="NextText" priority="0" />
+      <Item value="PdfTitle" priority="0" />
+      <Item value="databaseUser" priority="0" />
+      <Item value="databasePort" priority="0" />
+      <Item value="application" priority="5" />
+      <Item value="is" priority="2" />
+      <Item value="user" priority="1" />
+      <Item value="Db4oFactory" priority="1" />
+      <Item value="isServerEmbedded" priority="2" />
+      <Item value="Db4oServerModule" priority="0" />
+      <Item value="dbPort" priority="3" />
+      <Item value="filePath" priority="1" />
+      <Item value="port" priority="0" />
+      <Item value="dbFilePath" priority="2" />
+      <Item value="dbUser" priority="1" />
+      <Item value="pass" priority="0" />
+      <Item value="dbPass" priority="1" />
+      <Item value="IDisposable" priority="1" />
+      <Item value="CloseServer" priority="0" />
+      <Item value="IConfiguration" priority="2" />
+      <Item value="configuration" priority="2" />
+      <Item value="config" priority="2" />
+      <Item value="Ploosqva.WebAppFrame" priority="1" />
+      <Item value="internal" priority="0" />
+      <Item value="Db4oEventArgs" priority="2" />
+      <Item value="Database" priority="2" />
+      <Item value="IObjectServer" priority="0" />
+      <Item value="server" priority="0" />
+      <Item value="objectContainer" priority="1" />
+      <Item value="Db4oEventHandler" priority="3" />
+      <Item value="newDb" priority="1" />
+      <Item value="db4OEventHandler" priority="0" />
+      <Item value="NewDatabaseCreated" priority="1" />
+      <Item value="handler" priority="1" />
+      <Item value="OverflowException" priority="0" />
+      <Item value="OnNewDatabaseCreated" priority="0" />
+      <Item value="IObjectContainer" priority="0" />
+      <Item value="objectServer" priority="0" />
+      <Item value="c" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString" priority="2" />
+      <Item value="GetType" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.Assembly">
+      <Item value="GetAssembly" priority="0" />
+      <Item value="GetExecutingAssembly" priority="0" />
+      <Item value="GetCallingAssembly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="ToString" priority="0" />
+      <Item value="GetCustomAttributes" priority="0" />
+      <Item value="FullName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Resources.ResourceManager">
+      <Item value="GetString" priority="0" />
+      <Item value="GetResourceSet" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:EnumUtils.EnumLocalizer">
+      <Item value="resourcePath" priority="0" />
+      <Item value="ConvertTo" priority="0" />
+      <Item value="EnumType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="5" />
+      <Item value="Compare" priority="0" />
+      <Item value="IsNullOrEmpty" priority="15" />
+      <Item value="Format" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Enum">
+      <Item value="GetNames" priority="0" />
+      <Item value="GetValues" priority="0" />
+      <Item value="GetName" priority="0" />
+      <Item value="Parse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add" priority="1" />
+      <Item value="Contains" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Db4objects.Db4o.IObjectContainer">
+      <Item value="Store" priority="5" />
+      <Item value="Query" priority="0" />
+      <Item value="Commit" priority="0" />
+      <Item value="Ext" priority="0" />
+      <Item value="Close" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ploosqva.DbUtils.Db4o.AutoincrementBase">
+      <Item value="GetType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="CurrentThread" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="CurrentUICulture" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.DictionaryEntry">
+      <Item value="Key" priority="1" />
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.Assembly">
+      <Item value="Location" priority="0" />
+      <Item value="GetFile" priority="0" />
+      <Item value="FullName" priority="0" />
+      <Item value="GetName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="Combine" priority="2" />
+      <Item value="GetTempFileName" priority="3" />
+      <Item value="GetTempPath" priority="0" />
+      <Item value="GetRandomFileName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="CurrentDirectory" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ploosqva.WebUtils.AjaxValidation.AjaxValidationControl">
+      <Item value="ForeColor" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Gaia.WebWidgets.Panel">
+      <Item value="ForeColor" priority="0" />
+      <Item value="ForceAnUpdate" priority="1" />
+      <Item value="Controls" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.ControlCollection">
+      <Item value="Add" priority="11" />
+      <Item value="Clear" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Literal">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.HtmlControls.HtmlGenericControl">
+      <Item value="Controls" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Gaia.WebWidgets.TextBox">
+      <Item value="CssClass" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.WebControl">
+      <Item value="CssClass" priority="0" />
+      <Item value="ID" priority="1" />
+      <Item value="RenderControl" priority="1" />
+      <Item value="Visible" priority="0" />
+      <Item value="Style" priority="0" />
+      <Item value="Enabled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Gaia.WebWidgets.RadioButtonList">
+      <Item value="CssClass" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.CheckBox">
+      <Item value="Checked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ploosqva.WebUtils.Controls.AjaxValidationControl+ValidationMethod">
+      <Item value="Invoke" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Gaia.WebWidgets.CheckBox">
+      <Item value="Checked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ListControl">
+      <Item value="SelectedIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.UI.WebControls.ValidationDataType">
+      <Item value="String" priority="0" />
+      <Item value="Double" priority="0" />
+      <Item value="Date" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.TextBox">
+      <Item value="Text" priority="10" />
+      <Item value="RenderControl" priority="0" />
+      <Item value="ID" priority="0" />
+      <Item value="UniqueID" priority="1" />
+      <Item value="Width" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.UI.WebControls.ValidationCompareOperator">
+      <Item value="DataTypeCheck" priority="0" />
+      <Item value="Equal" priority="0" />
+      <Item value="GreaterThan" priority="0" />
+      <Item value="GreaterThanEqual" priority="0" />
+      <Item value="LessThan" priority="0" />
+      <Item value="LessThanEqual" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="TryParse" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Double">
+      <Item value="TryParse" priority="0" />
+      <Item value="MinValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="TryParse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Equals" priority="0" />
+      <Item value="Length" priority="4" />
+      <Item value="Replace" priority="0" />
+      <Item value="ToCharArray" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.RegularExpressions.Regex">
+      <Item value="Matches" priority="0" />
+      <Item value="IsMatch" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="ContainsKey" priority="0" />
+      <Item value="Add" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int16">
+      <Item value="Parse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Mail.SmtpClient">
+      <Item value="Send" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="0" />
+      <Item value="StackTrace" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.AssemblyName">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Directory">
+      <Item value="Exists" priority="0" />
+      <Item value="CreateDirectory" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileInfo">
+      <Item value="DirectoryName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileMode">
+      <Item value="Create" priority="0" />
+      <Item value="CreateNew" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="Close" priority="0" />
+      <Item value="Dispose" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.HttpContext">
+      <Item value="Current" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Mail.MailMessage">
+      <Item value="Attachments" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Mail.AttachmentCollection">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToBase64String" priority="2" />
+      <Item value="FromBase64String" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Db4objects.Db4o.Ext.IExtObjectContainer">
+      <Item value="Refresh" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid" priority="3" />
+      <Item value="Empty" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ploosqva.WebUtils.Platnosci.pl.CharacterEncoding">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Ploosqva.WebUtils.Communication.HttpPostMethod">
+      <Item value="Post" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ploosqva.WebUtils.Communication.RemotePost">
+      <Item value="Add" priority="4" />
+      <Item value="Post" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Math">
+      <Item value="Round" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpContext">
+      <Item value="Request" priority="4" />
+      <Item value="Response" priority="5" />
+      <Item value="Cache" priority="8" />
+      <Item value="Session" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.HtmlTextWriter">
+      <Item value="BeginRender" priority="1" />
+      <Item value="RenderBeginTag" priority="1" />
+      <Item value="RenderEndTag" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.UI.HtmlTextWriterTag">
+      <Item value="Img" priority="0" />
+      <Item value="Div" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ImageButton">
+      <Item value="Render" priority="0" />
+      <Item value="LoadPostData" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ploosqva.WebUtils.Controls.CaptchaImageControl">
+      <Item value="ID" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ploosqva.ImageUtils.CaptchaImage">
+      <Item value="Image" priority="1" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Bitmap">
+      <Item value="Save" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpResponse">
+      <Item value="OutputStream" priority="0" />
+      <Item value="End" priority="2" />
+      <Item value="StatusCode" priority="1" />
+      <Item value="ContentType" priority="0" />
+      <Item value="ClearContent" priority="0" />
+      <Item value="WriteFile" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Imaging.ImageFormat">
+      <Item value="Jpeg" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.StringBuilder">
+      <Item value="AppendFormat" priority="0" />
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="Next" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ploosqva.ClassUtils.String.RandomString">
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Unit">
+      <Item value="Value" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Guid">
+      <Item value="ToString" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Caching.Cache">
+      <Item value="Insert" priority="0" />
+      <Item value="Remove" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Caching.Cache">
+      <Item value="NoAbsoluteExpiration" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.SessionState.HttpSessionState">
+      <Item value="Timeout" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Repeater">
+      <Item value="AlternatingItemTemplate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Image">
+      <Item value="RenderControl" priority="0" />
+      <Item value="ImageUrl" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:iTextSharp.text.pdf.PdfReader">
+      <Item value="NumberOfPages" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Text.Encoding">
+      <Item value="UTF8" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.Encoding">
+      <Item value="GetBytes" priority="0" />
+      <Item value="GetString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Ploosqva.ImageUtils.ImageResizer">
+      <Item value="Resize" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Image">
+      <Item value="FromFile" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Ploosqva.GeneralUtils.Pdf.PdfToImage">
+      <Item value="Convert" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ploosqva.WebUtils.Controls.PdfViewerControlBase">
+      <Item value="btnClose" priority="0" />
+      <Item value="IncrementPage" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="Delete" priority="2" />
+      <Item value="Exists" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.AppDomain">
+      <Item value="CurrentDomain" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.AppDomain">
+      <Item value="BaseDirectory" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Gouda.Api.Ghostscript">
+      <Item value="Exit" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.IButtonControl">
+      <Item value="Click" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.CompositeControl">
+      <Item value="Render" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Control">
+      <Item value="Visible" priority="0" />
+      <Item value="Focus" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Gaia.WebWidgets.AspectKey+KeyPressedEventArgs">
+      <Item value="Key" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Gaia.WebWidgets.AspectKey">
+      <Item value="KeyCode" priority="3" />
+      <Item value="KeyFilter" priority="0" />
+      <Item value="KeyPressedEventArgs" priority="0" />
+      <Item value="KeyEventArgs" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Gaia.WebWidgets.AspectKey+KeyCode">
+      <Item value="ESC" priority="1" />
+      <Item value="RIGHT" priority="1" />
+      <Item value="LEFT" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Gaia.WebWidgets.AspectKey">
+      <Item value="AddFilter" priority="0" />
+      <Item value="KeyPressed" priority="0" />
+      <Item value="KeyDown" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Gaia.WebWidgets.ImageButton">
+      <Item value="Aspects" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Gaia.WebWidgets.AspectCollection">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Gaia.WebWidgets.AspectKey+KeyEventArgs">
+      <Item value="Key" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Gaia.WebWidgets.AspectKey+Key">
+      <Item value="KeyCode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Page">
+      <Item value="Response" priority="2" />
+      <Item value="ContentType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpApplication">
+      <Item value="Application" priority="4" />
+      <Item value="Context" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FitCom.ApplicationServer.Db4oServerModule">
+      <Item value="Server" priority="1" />
+      <Item value="OpenServer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Db4objects.Db4o.IObjectServer">
+      <Item value="OpenClient" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Db4objects.Db4o.Db4oFactory">
+      <Item value="Configure" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
