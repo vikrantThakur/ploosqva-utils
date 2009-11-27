@@ -62,8 +62,8 @@ namespace Ploosqva.WebAppFrame.Database
         /// <param name="user">db username (not used in embedded mode)</param>
         /// <param name="pass">db user password (not used in embedded mode)</param>
         /// <param name="config">custom configurtion. leave null to use defaults</param>
-        public static void InitServer(string filePath, int port, string user, string pass,
-            IConfiguration config)
+        public static void InitServer(string filePath, int port, 
+            string user, string pass, IConfiguration config)
         {
             if (objectServer == null)
             {
@@ -74,7 +74,28 @@ namespace Ploosqva.WebAppFrame.Database
                 dbFilePath = filePath;
                 dbUser = user;
                 dbPass = pass;
+
+                StartServer();
             }
+        }
+
+        private static void StartServer()
+        {
+            bool newDb = false;
+            if (!File.Exists(dbFilePath))
+                newDb = true;
+
+            objectServer = Db4oFactory.OpenServer(Configure(), dbFilePath, dbPort);
+
+            if (newDb)
+            {
+                IObjectContainer c = objectServer.OpenClient();
+
+                OnNewDatabaseCreated(new Db4oEventArgs(objectServer, c));
+            }
+
+            if (!string.IsNullOrEmpty(dbUser) && !string.IsNullOrEmpty(dbPass))
+                objectServer.GrantAccess(dbUser, dbPass);
         }
 
         /// <summary>
@@ -84,24 +105,9 @@ namespace Ploosqva.WebAppFrame.Database
         {
             get
             {
-                bool newDb = false;
-
                 if (objectServer == null)
                 {
-                    if (!File.Exists(dbFilePath))
-                        newDb = true;
-
-                    objectServer = Db4oFactory.OpenServer(Configure(), dbFilePath, dbPort);
-
-                    if (newDb)
-                    {
-                        IObjectContainer c = objectServer.OpenClient();
-
-                        OnNewDatabaseCreated(new Db4oEventArgs(objectServer, c));
-                    }
-
-                    if (!string.IsNullOrEmpty(dbUser) && !string.IsNullOrEmpty(dbPass))
-                        objectServer.GrantAccess(dbUser, dbPass);
+                    StartServer();
                 }
 
                 return objectServer;
