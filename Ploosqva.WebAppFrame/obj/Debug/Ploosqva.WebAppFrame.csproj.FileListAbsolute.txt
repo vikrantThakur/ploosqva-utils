@@ -1,0 +1,8 @@
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\Ploosqva.WebAppFrame\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\Ploosqva.WebAppFrame\bin\Debug\Ploosqva.WebAppFrame.dll
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\Ploosqva.WebAppFrame\bin\Debug\Ploosqva.WebAppFrame.pdb
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\Ploosqva.WebAppFrame\bin\Debug\Db4objects.Db4o.dll
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\Ploosqva.WebAppFrame\bin\Debug\Db4objects.Db4o.xml
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\Ploosqva.WebAppFrame\obj\Debug\Ploosqva.WebAppFrame.dll
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\Ploosqva.WebAppFrame\obj\Debug\Ploosqva.WebAppFrame.pdb
+C:\Users\ploosqva\Documents\Visual Studio 2008\Projects\Ploosqva\Ploosqva.WebAppFrame\bin\Debug\Ploosqva.WebAppFrame.XML
