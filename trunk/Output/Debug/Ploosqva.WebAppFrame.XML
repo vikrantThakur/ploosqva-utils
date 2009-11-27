@@ -69,6 +69,11 @@
             Method to close the server connection
             </summary>
         </member>
+        <member name="E:Ploosqva.WebAppFrame.Database.Db4oServerModule.NewDatabaseCreated">
+            <summary>
+             Occurs after a new db4o database (file) has been created. 
+            </summary>
+        </member>
         <member name="P:Ploosqva.WebAppFrame.Database.Db4oServerModule.Server">
             <summary>
             Opens a server connection to the db4o database on a request 
@@ -98,6 +103,16 @@
             <summary>
             keys for the named parameters in Web.config 
             </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.Database.Db4oHttpModule.InitClient(System.Boolean,System.String,System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+             Initializes database client connection parameters
+            </summary>
+            <param name="isServerEmbedded">if true, will try to connect to a locally running db4o server and will ignore the other parameters</param>
+            <param name="host">server host address/ip. If null, localhost is used</param>
+            <param name="port">server port. If null, 10000 is used</param>
+            <param name="user">db username as set using Db4oServerModule#Init</param>
+            <param name="password">db user password as set using Db4oServerModule#Init</param>
         </member>
         <member name="M:Ploosqva.WebAppFrame.Database.Db4oHttpModule.Init(System.Web.HttpApplication)">
             <summary>
@@ -132,6 +147,21 @@
         <member name="M:Ploosqva.WebAppFrame.Database.Controller.CloseDatabaseServer">
             <summary>
             Commits all changes and closes the database
+            </summary>
+        </member>
+        <member name="T:Ploosqva.WebAppFrame.Database.Db4oEventArgs">
+            <summary>
+             Arguments for events using the database server/client
+            </summary>
+        </member>
+        <member name="P:Ploosqva.WebAppFrame.Database.Db4oEventArgs.Database">
+            <summary>
+             D4bo client (an be null at some events)
+            </summary>
+        </member>
+        <member name="P:Ploosqva.WebAppFrame.Database.Db4oEventArgs.Server">
+            <summary>
+            D4bo server (an be null at some events)
             </summary>
         </member>
     </members>

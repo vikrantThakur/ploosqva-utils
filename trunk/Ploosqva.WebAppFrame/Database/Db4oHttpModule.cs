@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Configuration;
-using System.Net;
 using System.Net.Sockets;
 using System.Web;
 using Db4objects.Db4o;
@@ -13,18 +11,47 @@ namespace Ploosqva.WebAppFrame.Database
     /// To change default behavior, HttpApplicationState variables 
     /// dbServerEmbedded, dbHost, dbPort, dbUser and dbPass have to be set.
     /// </summary>
-    class Db4oHttpModule : IHttpModule
+    public class Db4oHttpModule : IHttpModule
     {
         /// <summary>
         /// keys for the named parameters in Web.config 
         /// </summary>
         internal const string KEY_DB4O_CLIENT = "db4oClient";
 
-        private static int port = 10000;
-        private static string host = "localhost";
-        private static string user;
-        private static string password;
-        private static bool isServerEmbedded = true;
+        private static int dbPort = 10000;
+        private static string dbHost = "localhost";
+        private static string dbUser;
+        private static string dbPass;
+        private static bool isEmbeddedServer = true;
+
+        ///<summary>
+        /// Initializes database client connection parameters
+        ///</summary>
+        ///<param name="isServerEmbedded">if true, will try to connect to a locally running db4o server and will ignore the other parameters</param>
+        ///<param name="host">server host address/ip. If null, localhost is used</param>
+        ///<param name="port">server port. If null, 10000 is used</param>
+        ///<param name="user">db username as set using Db4oServerModule#Init</param>
+        ///<param name="password">db user password as set using Db4oServerModule#Init</param>
+        public static void InitClient(bool isServerEmbedded, string host, int? port,
+            string user, string password)
+        {
+            isEmbeddedServer = isServerEmbedded;
+
+            if (!isServerEmbedded)
+            {
+                if (port != null)
+                    dbPort = (int) port;
+
+                if (!string.IsNullOrEmpty(host))
+                    dbHost = host;
+
+                if (!string.IsNullOrEmpty(user))
+                    dbUser = user;
+
+                if (!string.IsNullOrEmpty(password))
+                    dbPass = password;
+            }
+        }
 
         /// <summary>
         /// Initializes the Db4oHttpModule, and sets server data from HttpApplicationState
@@ -33,30 +60,7 @@ namespace Ploosqva.WebAppFrame.Database
         /// <param name="application">application class</param>
         public void Init(HttpApplication application)
         {
-            application.EndRequest += Application_EndRequest;
-
-            if (application.Application["dbServerEmbedded"] != null
-                && application.Application["dbServerEmbedded"] is bool)
-                isServerEmbedded = (bool) application.Application["dbServerEmbedded"];
-
-            if (!isServerEmbedded)
-            {
-                if (application.Application["dbPort"] != null
-                    && application.Application["dbPort"] is int)
-                    port = (int) application.Application["dbPort"];
-
-                if (application.Application["dbHost"] != null
-                    && application.Application["dbHost"] is string)
-                    host = (string) application.Application["dbHost"];
-
-                if (application.Application["dbUser"] != null
-                    && application.Application["dbUser"] is string)
-                    user = (string) application.Application["dbUser"];
-
-                if (application.Application["dbPass"] != null
-                    && application.Application["dbPass"] is string)
-                    password = (string) application.Application["dbPass"];
-            }
+            application.EndRequest += Application_EndRequest;            
         }
 
         /// <summary>
@@ -77,16 +81,16 @@ namespace Ploosqva.WebAppFrame.Database
                     /// that the main web app is not running
                     try
                     {
-                        if (isServerEmbedded)
+                        if (isEmbeddedServer)
                             objectClient = Db4oServerModule.Server.OpenClient();
                         else
-                            objectClient = Db4oFactory.OpenClient(host, port, user, password);
+                            objectClient = Db4oFactory.OpenClient(dbHost, dbPort, dbUser, dbPass);
                     }
                     catch (SocketException)
                     {
                         throw new Exception(string.Format("Cannot connect to database. "
                             + "Is the db4o server running on {1} and listening on port {0}?",
-                            port, host));
+                            dbPort, dbHost));
                     }
 
                     context.Items[KEY_DB4O_CLIENT] = objectClient;
