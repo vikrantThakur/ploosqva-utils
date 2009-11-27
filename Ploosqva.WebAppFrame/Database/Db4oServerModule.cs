@@ -23,6 +23,9 @@ namespace Ploosqva.WebAppFrame.Database
         private static int dbPort;
         private static string dbUser, dbPass;
 
+        ///<summary>
+        /// Occurs after a new db4o database (file) has been created. 
+        ///</summary>
         public static event Db4oEventHandler NewDatabaseCreated;
 
         protected static void OnNewDatabaseCreated(Db4oEventArgs args)
@@ -94,7 +97,7 @@ namespace Ploosqva.WebAppFrame.Database
                     {
                         IObjectContainer c = objectServer.OpenClient();
 
-                        OnNewDatabaseCreated(new Db4oEventArgs(c));
+                        OnNewDatabaseCreated(new Db4oEventArgs(objectServer, c));
                     }
 
                     if (!string.IsNullOrEmpty(dbUser) && !string.IsNullOrEmpty(dbPass))
