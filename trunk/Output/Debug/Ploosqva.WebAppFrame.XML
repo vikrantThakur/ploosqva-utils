@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ploosqva.WebAppFrame</name>
+    </assembly>
+    <members>
+        <member name="T:Ploosqva.WebAppFrame.DbFacade.FacadeBase">
+            <summary>
+            Base class for creating a web application facade
+            </summary>
+        </member>
+        <member name="F:Ploosqva.WebAppFrame.DbFacade.FacadeBase.ctrl">
+            <summary>
+            The application's controller
+            </summary>
+        </member>
+        <member name="F:Ploosqva.WebAppFrame.DbFacade.FacadeBase.objectContainer">
+            <summary>
+            The database client class used by SessionManager to access the database
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.DbFacade.FacadeBase.CloseDatabaseServer">
+            <summary>
+            Commits all changes and closes the database
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.DbFacade.FacadeBase.GetObjectId(System.Object)">
+            <summary>
+            Returns the database-unique id for an object
+            </summary>
+        </member>
+        <member name="P:Ploosqva.WebAppFrame.DbFacade.FacadeBase.Db4oClient">
+            <summary>
+            Db4o database class
+            </summary>
+        </member>
+        <member name="T:Ploosqva.WebAppFrame.Database.Db4oServerModule">
+            <summary>
+            ServerModule manages opening and closing of a db4o server:
+            - the server is opened on the first request
+            - the server is closed when the application is offloaded
+            </summary>
+        </member>
+        <member name="F:Ploosqva.WebAppFrame.Database.Db4oServerModule.objectServer">
+            <summary>
+            Static server object
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.Database.Db4oServerModule.Configure">
+            <summary>
+            Registers an alias for persistent classes namespace and assembly. The current assembly is temporary 
+            and renamed after each recompilation, that is why it can not be used for persistence. An alias name is used 
+            to persist the classes 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.Database.Db4oServerModule.InitServer(System.String,System.Int32,System.String,System.String,Db4objects.Db4o.Config.IConfiguration)">
+            <summary>
+            Initializes server configutration. Set port to 0 to open server in embedded mode
+            </summary>
+            <param name="filePath">path to database file</param>
+            <param name="port">port used by server (0 for embedded server)</param>
+            <param name="user">db username (not used in embedded mode)</param>
+            <param name="pass">db user password (not used in embedded mode)</param>
+            <param name="config">custom configurtion. leave null to use defaults</param>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.Database.Db4oServerModule.CloseServer">
+            <summary>
+            Method to close the server connection
+            </summary>
+        </member>
+        <member name="P:Ploosqva.WebAppFrame.Database.Db4oServerModule.Server">
+            <summary>
+            Opens a server connection to the db4o database on a request 
+            </summary>
+        </member>
+        <member name="T:Ploosqva.WebAppFrame.FormsBase.Db4oEnabledPageBase">
+            <summary>
+            Every page should extend this class to enable globalization, server-side
+            ViewState and access to the SessionManager class
+            </summary>
+        </member>
+        <member name="P:Ploosqva.WebAppFrame.FormsBase.Db4oEnabledPageBase.Facade">
+            <summary>
+            The entrypoint to the application layer for all webpages. The SessionManager
+            has to be used to run all business bahavior.
+            </summary>
+        </member>
+        <member name="T:Ploosqva.WebAppFrame.Database.Db4oHttpModule">
+            <summary>
+            This module opens a client connection to a db4o database server.
+            By default client tries to connect to embedded server
+            To change default behavior, HttpApplicationState variables 
+            dbServerEmbedded, dbHost, dbPort, dbUser and dbPass have to be set.
+            </summary>
+        </member>
+        <member name="F:Ploosqva.WebAppFrame.Database.Db4oHttpModule.KEY_DB4O_CLIENT">
+            <summary>
+            keys for the named parameters in Web.config 
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.Database.Db4oHttpModule.Init(System.Web.HttpApplication)">
+            <summary>
+            Initializes the Db4oHttpModule, and sets server data from HttpApplicationState
+            (if set)
+            </summary>
+            <param name="application">application class</param>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.Database.Db4oHttpModule.Application_EndRequest(System.Object,System.EventArgs)">
+            <summary>
+            Closes db4o client on request end
+            </summary>
+            <param name="sender">The HttpApplication</param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Ploosqva.WebAppFrame.Database.Db4oHttpModule.Client">
+            <summary>
+            Returns an existing client connection to the caller. 
+            If client connection does not exist - it will be created
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.Database.Controller.GetController">
+            <summary>
+            Creates a Controller and returns it
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.Database.Controller.GetDbClient">
+            <summary>
+            Pobiera połączenie z bazą. Jeżeli dla tej sesji nie istniało, zostanie otwarte nowe
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.Database.Controller.CloseDatabaseServer">
+            <summary>
+            Commits all changes and closes the database
+            </summary>
+        </member>
+    </members>
+</doc>
