@@ -317,7 +317,7 @@
         </member>
         <member name="T:Ploosqva.ClassUtils.ResourcePathAttribute">
             <summary>
-            Contains location of resource file used by EnumLocalize class
+            Contains location of resource file used by EnumLocalizer class
             </summary>
         </member>
         <member name="M:Ploosqva.ClassUtils.ResourcePathAttribute.#ctor(System.String)">
