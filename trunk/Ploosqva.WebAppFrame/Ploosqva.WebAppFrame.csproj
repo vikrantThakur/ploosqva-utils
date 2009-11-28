@@ -62,7 +62,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FormsBase\RequiredRightsAttribute.cs" />
-    <Compile Include="FormsBase\RequiredRightsCheckExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

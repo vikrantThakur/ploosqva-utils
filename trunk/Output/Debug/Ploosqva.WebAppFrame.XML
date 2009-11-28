@@ -181,14 +181,14 @@
             </summary>
             <param name="rights">list of right objects which will allow access to this object</param>
         </member>
-        <member name="T:Ploosqva.WebAppFrame.FormsBase.RequiredRightsCheckExtensionMethods">
+        <member name="T:Ploosqva.WebAppFrame.ExtensionMethods">
             <summary>
              Contains extension method, which allow checking, wheather extended objects
              are decorated with RequiredRightsAttribute and this attribute contains
              certain objects
             </summary>
         </member>
-        <member name="M:Ploosqva.WebAppFrame.FormsBase.RequiredRightsCheckExtensionMethods.CheckRequiredRights``1(System.Object,``0)">
+        <member name="M:Ploosqva.WebAppFrame.ExtensionMethods.CheckRequiredRights``1(System.Object,``0)">
             <summary>
              Checks for rights in class's RequiredRightsAttribute
             </summary>
