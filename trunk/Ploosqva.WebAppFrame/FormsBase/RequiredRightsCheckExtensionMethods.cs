@@ -1,4 +1,6 @@
-﻿namespace Ploosqva.WebAppFrame.FormsBase
+﻿using System;
+
+namespace Ploosqva.WebAppFrame.FormsBase
 {
     ///<summary>
     /// Contains extension method, which allow checking, wheather extended objects
@@ -10,17 +12,20 @@
         ///<summary>
         /// Checks for rights in class's RequiredRightsAttribute
         ///</summary>
-        ///<returns>true if class is not decorated with RequiredRightsAttribute or the attribute contains required right or false if it does not</returns>
-        public static bool CheckRequiredRights<T>(this object o, T right)
+        ///<returns>true if class is not decorated with RequiredRightsAttribute or one of 
+        /// the attributes contains required right or false if none of them do</returns>
+        public static bool CheckRequiredRights<T>(this object o, T right) where T : IComparable
         {
             var attributes = o.GetType().GetCustomAttributes(typeof(RequiredRightsAttribute), true);
-            if (attributes.Length != 0)
+
+            foreach (RequiredRightsAttribute attribute in attributes)
             {
-                var attr = (RequiredRightsAttribute)attributes[0];
+                if(attribute.RightType != typeof(T))
+                    continue;
 
-                return attr.ContainsRight(right);
+                return attribute.Rights.Contains(right);
             }
-
+            
             return true;
         }
     }

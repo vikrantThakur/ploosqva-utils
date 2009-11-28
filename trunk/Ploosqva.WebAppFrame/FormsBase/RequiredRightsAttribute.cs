@@ -7,10 +7,11 @@ namespace Ploosqva.WebAppFrame.FormsBase
     /// This attribute can be used to decorate objects with required right to access it.
     /// For example it can allow controll over users accessing specific classes or methods
     ///</summary>
-    [AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.All, AllowMultiple = true)]
     public class RequiredRightsAttribute : Attribute
     {
-        private List<object> Rights { get; set; }
+        internal List<object> Rights { get; set; }
+        internal Type RightType { get; set; }
 
         ///<summary>
         /// Creates a new instance of RequiredRightsAttribute
@@ -18,15 +19,11 @@ namespace Ploosqva.WebAppFrame.FormsBase
         ///<param name="rights">list of right objects which will allow access to this object</param>
         public RequiredRightsAttribute(params object[] rights)
         {
-            Rights = new List<object>(rights);
-        }
+            if(rights.Length == 0)
+                throw new ArgumentException("rights cannot be empty");
 
-        ///<summary>
-        /// Method checks wheather the list Rights contains a right
-        ///</summary>
-        public bool ContainsRight(object right)
-        {
-            return Rights.Contains(right);
+            Rights = new List<object>(rights);
+            RightType = rights[0].GetType();
         }
     }
 }
