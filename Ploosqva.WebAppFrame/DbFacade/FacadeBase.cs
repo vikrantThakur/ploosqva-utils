@@ -1,3 +1,5 @@
+using System.Web;
+using System.Web.SessionState;
 using Db4objects.Db4o;
 using Ploosqva.WebAppFrame.Database;
 
@@ -23,7 +25,7 @@ namespace Ploosqva.WebAppFrame.DbFacade
         /// <summary>
         /// Db4o database class
         /// </summary>
-        protected internal IObjectContainer Db4oClient
+        protected virtual IObjectContainer Db4oClient
         {
             get
             {
@@ -33,7 +35,16 @@ namespace Ploosqva.WebAppFrame.DbFacade
                 return objectContainer;
             }
         }
-
+        /// <summary>
+        /// Give access to current session and allows overriding for unit tests
+        /// </summary>
+        protected virtual HttpSessionState Session
+        {
+            get
+            {
+                return HttpContext.Current.Session;
+            }
+        }
         #endregion
 
         #region Methods
