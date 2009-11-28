@@ -3,8 +3,9 @@
 namespace Ploosqva.ClassUtils
 {
     /// <summary>
-    /// Contains location of resource file used by EnumLocalize class
+    /// Contains location of resource file used by EnumLocalizer class
     /// </summary>
+    [AttributeUsage(AttributeTargets.Enum, AllowMultiple = false)]
     public class ResourcePathAttribute : Attribute
     {
         internal string Path { get; set; }
