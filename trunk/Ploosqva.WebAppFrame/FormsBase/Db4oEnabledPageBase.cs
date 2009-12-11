@@ -3,8 +3,6 @@
 namespace Ploosqva.WebAppFrame.FormsBase
 {
     /// <summary>
-    /// Every page should extend this class to enable globalization, server-side
-    /// ViewState and access to the SessionManager class
     /// </summary>
     public abstract class Db4oEnabledPageBase : System.Web.UI.Page
     {

@@ -84,10 +84,34 @@
             Opens a server connection to the db4o database on a request 
             </summary>
         </member>
+        <member name="T:Ploosqva.WebAppFrame.FormsBase.RequiredRightsAttribute">
+            <summary>
+             This attribute can be used to decorate objects with required right to access it.
+             For example it can allow controll over users accessing specific classes or methods
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.FormsBase.RequiredRightsAttribute.#ctor(System.Object[])">
+            <summary>
+             Creates a new instance of RequiredRightsAttribute
+            </summary>
+            <param name="rights">list of right objects which will allow access to this object</param>
+        </member>
+        <member name="T:Ploosqva.WebAppFrame.ExtensionMethods">
+            <summary>
+             Contains extension method, which allow checking, wheather extended objects
+             are decorated with RequiredRightsAttribute and this attribute contains
+             certain objects
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.ExtensionMethods.CheckRequiredRights``1(System.Object,``0)">
+            <summary>
+             Checks for rights in class's RequiredRightsAttribute
+            </summary>
+            <returns>true if class is not decorated with RequiredRightsAttribute or one of 
+             the attributes contains required right or false if none of them do</returns>
+        </member>
         <member name="T:Ploosqva.WebAppFrame.FormsBase.Db4oEnabledPageBase">
             <summary>
-            Every page should extend this class to enable globalization, server-side
-            ViewState and access to the SessionManager class
             </summary>
         </member>
         <member name="P:Ploosqva.WebAppFrame.FormsBase.Db4oEnabledPageBase.Facade">
@@ -168,32 +192,6 @@
             <summary>
             D4bo server (an be null at some events)
             </summary>
-        </member>
-        <member name="T:Ploosqva.WebAppFrame.FormsBase.RequiredRightsAttribute">
-            <summary>
-             This attribute can be used to decorate objects with required right to access it.
-             For example it can allow controll over users accessing specific classes or methods
-            </summary>
-        </member>
-        <member name="M:Ploosqva.WebAppFrame.FormsBase.RequiredRightsAttribute.#ctor(System.Object[])">
-            <summary>
-             Creates a new instance of RequiredRightsAttribute
-            </summary>
-            <param name="rights">list of right objects which will allow access to this object</param>
-        </member>
-        <member name="T:Ploosqva.WebAppFrame.ExtensionMethods">
-            <summary>
-             Contains extension method, which allow checking, wheather extended objects
-             are decorated with RequiredRightsAttribute and this attribute contains
-             certain objects
-            </summary>
-        </member>
-        <member name="M:Ploosqva.WebAppFrame.ExtensionMethods.CheckRequiredRights``1(System.Object,``0)">
-            <summary>
-             Checks for rights in class's RequiredRightsAttribute
-            </summary>
-            <returns>true if class is not decorated with RequiredRightsAttribute or one of 
-             the attributes contains required right or false if none of them do</returns>
         </member>
     </members>
 </doc>

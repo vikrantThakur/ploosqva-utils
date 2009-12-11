@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{320C4E32-039B-4CDB-9A35-E5D42FE7BD8C}</ProjectGuid>
+    <ProjectGuid>{4B7335BF-25FC-423E-8F5A-B035DC3DC899}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ploosqva.WebAppFrame</RootNamespace>
-    <AssemblyName>Ploosqva.WebAppFrame</AssemblyName>
+    <RootNamespace>Ploosqva.UnitTests</RootNamespace>
+    <AssemblyName>Ploosqva.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -17,31 +17,25 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Output\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Output\Debug\Ploosqva.WebAppFrame.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\Output\Release\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Db4objects.Db4o, Version=7.4.106.13438, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\Db4objects.Db4o.dll</HintPath>
-    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.2.9222, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -52,19 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\Controller.cs" />
-    <Compile Include="Database\Db4oEventArgs.cs" />
-    <Compile Include="Database\Db4oEventHandler.cs" />
-    <Compile Include="Database\Db4oHttpModule.cs" />
-    <Compile Include="Database\Db4oServerModule.cs" />
-    <Compile Include="DbFacade\FacadeBase.cs" />
-    <Compile Include="FormsBase\Db4oApplication.cs" />
-    <Compile Include="FormsBase\Db4oEnabledPageBase.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FormsBase\RequiredRightsAttribute.cs" />
-    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Ploosqva\ClassUtils\String\RandomString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ploosqva.WebAppFrame\Ploosqva.WebAppFrame.csproj">
+      <Project>{320C4E32-039B-4CDB-9A35-E5D42FE7BD8C}</Project>
+      <Name>Ploosqva.WebAppFrame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ploosqva\Ploosqva.csproj">
+      <Project>{FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51}</Project>
+      <Name>Ploosqva</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
