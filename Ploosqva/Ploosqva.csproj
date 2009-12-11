@@ -36,9 +36,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\Db4objects.Db4o.dll</HintPath>
     </Reference>
-    <Reference Include="Gaia.WebWidgets, Version=3.6.834.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Gaia.WebWidgets, Version=3.6.834.1, Culture=neutral, PublicKeyToken=e3fc7cc7a1b1114a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Gaia.WebWidgets.dll</HintPath>
+      <HintPath>..\Libs\Gaia.WebWidgets.dll</HintPath>
     </Reference>
     <Reference Include="Gaia.WebWidgets.Effects, Version=3.6.834.1, Culture=neutral, PublicKeyToken=e3fc7cc7a1b1114a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
