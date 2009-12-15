@@ -29,6 +29,29 @@
             Returns the database-unique id for an object
             </summary>
         </member>
+        <member name="M:Ploosqva.WebAppFrame.DbFacade.FacadeBase.CheckMethodInvocationRights``1(``0)">
+            <summary>
+            Method check wheather user has appropriete rights and fires
+            UnauthorizedAccessAttempt if not
+            </summary>
+            <typeparam name="T">type of right</typeparam>
+            <param name="right">the right user needs to pass the test</param>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.DbFacade.FacadeBase.CheckClassAccessRights``1(System.Type,``0)">
+            <summary>
+             Method makes check wheather the given type is decorated with
+             RequiredRightsAttribute and fires UnauthorizedAccessAttempt if it is not
+            </summary>
+            <param name="t">checked classes type</param>
+             <typeparam name="T">type of right</typeparam>
+             <param name="right">the right user needs to pass the test</param>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.DbFacade.FacadeBase.CheckUserLogonStatus(System.String)">
+            <summary>
+            Method checks wheather user is logged in and fires
+            UnloggedUserActionAttempt is not
+            </summary>
+        </member>
         <member name="P:Ploosqva.WebAppFrame.DbFacade.FacadeBase.Db4oClient">
             <summary>
             Db4o database class
@@ -37,6 +60,22 @@
         <member name="P:Ploosqva.WebAppFrame.DbFacade.FacadeBase.Session">
             <summary>
             Give access to current session and allows overriding for unit tests
+            </summary>
+        </member>
+        <member name="E:Ploosqva.WebAppFrame.DbFacade.FacadeBase.UnloggedUserActionAttempt">
+            <summary>
+             Event raised when unlogged user attempts an action which requires
+             logging in
+            </summary>
+        </member>
+        <member name="E:Ploosqva.WebAppFrame.DbFacade.FacadeBase.UnauthorizedAccessAttempt">
+            <summary>
+             Event raised when user attempts an action which requires
+             rights he does not posess
+            </summary>
+        </member>
+        <member name="T:Ploosqva.WebAppFrame.Database.Db4oEventHandler">
+            <summary>
             </summary>
         </member>
         <member name="T:Ploosqva.WebAppFrame.Database.Db4oServerModule">
@@ -87,7 +126,7 @@
         <member name="T:Ploosqva.WebAppFrame.FormsBase.RequiredRightsAttribute">
             <summary>
              This attribute can be used to decorate objects with required right to access it.
-             For example it can allow controll over users accessing specific classes or methods
+             For example it can allow control over users accessing specific classes or methods
             </summary>
         </member>
         <member name="M:Ploosqva.WebAppFrame.FormsBase.RequiredRightsAttribute.#ctor(System.Object[])">
@@ -192,6 +231,35 @@
             <summary>
             D4bo server (an be null at some events)
             </summary>
+        </member>
+        <member name="T:Ploosqva.WebAppFrame.DbFacade.UnloggedUserEventArgs">
+            <summary>
+             These event arguments allow precise action if a user is not logged in
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebAppFrame.DbFacade.UnloggedUserEventArgs.#ctor(System.Web.HttpRequest,System.Web.HttpResponse)">
+            <summary>
+             This constructor can be used for web applications and allows actions such
+             as redirect to login page with return url
+            </summary>
+            <param name="request"></param>
+            <param name="response"></param>
+        </member>
+        <member name="P:Ploosqva.WebAppFrame.DbFacade.UnloggedUserEventArgs.Response">
+            <summary>
+             Response object current for the http request which fired this event
+            </summary>
+        </member>
+        <member name="P:Ploosqva.WebAppFrame.DbFacade.UnloggedUserEventArgs.Request">
+            <summary>
+             Response object current for the http request which fired this event
+            </summary>
+        </member>
+        <member name="T:Ploosqva.WebAppFrame.DbFacade.UnloggedUserEventHandler">
+            <summary>
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
         </member>
     </members>
 </doc>
