@@ -117,11 +117,11 @@ namespace Ploosqva.WebAppFrame.DbFacade
         /// Event raised when unlogged user attempts an action which requires
         /// logging in
         ///</summary>
-        public static event UnloggedUseEventHandler UnloggedUserActionAttempt;
+        public static event UnloggedUserEventHandler UnloggedUserActionAttempt;
 
         protected static void OnUnloggedUserActionAttempt(HttpRequest request, HttpResponse response)
         {
-            UnloggedUseEventHandler handler = UnloggedUserActionAttempt;
+            UnloggedUserEventHandler handler = UnloggedUserActionAttempt;
 
             if (handler != null)
             {
