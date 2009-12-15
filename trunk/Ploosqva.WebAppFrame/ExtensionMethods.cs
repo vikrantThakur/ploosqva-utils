@@ -1,4 +1,6 @@
-﻿using Ploosqva.WebAppFrame.FormsBase;
+﻿using System;
+using System.Reflection;
+using Ploosqva.WebAppFrame.FormsBase;
 
 namespace Ploosqva.WebAppFrame
 {
@@ -16,7 +18,12 @@ namespace Ploosqva.WebAppFrame
         /// the attributes contains required right or false if none of them do</returns>
         public static bool CheckRequiredRights<T>(this object o, T right)
         {
-            var attributes = o.GetType().GetCustomAttributes(typeof(RequiredRightsAttribute), true);
+            RequiredRightsAttribute[] attributes;
+                
+            if(o is MemberInfo)
+                attributes = (RequiredRightsAttribute[]) Attribute.GetCustomAttributes(o as MemberInfo, typeof(RequiredRightsAttribute), true);
+            else
+                attributes = (RequiredRightsAttribute[])o.GetType().GetCustomAttributes(typeof(RequiredRightsAttribute), true);
 
             foreach (RequiredRightsAttribute attribute in attributes)
             {
