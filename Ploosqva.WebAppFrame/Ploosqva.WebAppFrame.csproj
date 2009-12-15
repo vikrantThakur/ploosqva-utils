@@ -58,6 +58,8 @@
     <Compile Include="Database\Db4oHttpModule.cs" />
     <Compile Include="Database\Db4oServerModule.cs" />
     <Compile Include="DbFacade\FacadeBase.cs" />
+    <Compile Include="DbFacade\UnloggedUseEventHandler.cs" />
+    <Compile Include="DbFacade\UnloggedUserEventArgs.cs" />
     <Compile Include="FormsBase\Db4oApplication.cs" />
     <Compile Include="FormsBase\Db4oEnabledPageBase.cs">
       <SubType>ASPXCodeBehind</SubType>

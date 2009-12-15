@@ -1,3 +1,5 @@
+using System;
+using System.Diagnostics;
 using System.Web;
 using System.Web.SessionState;
 using Db4objects.Db4o;
@@ -29,8 +31,13 @@ namespace Ploosqva.WebAppFrame.DbFacade
         {
             get
             {
+                if (objectContainer != null && objectContainer.Ext().IsClosed())
+                    objectContainer = null;
+
                 if (objectContainer == null)
+                {
                     objectContainer = ctrl.GetDbClient();
+                }
 
                 return objectContainer;
             }
@@ -69,6 +76,75 @@ namespace Ploosqva.WebAppFrame.DbFacade
         {
             return Db4oClient.Ext().GetID(item);
         }
+
+        /// <summary>
+        /// Method check wheather user has appropriete rights and fires
+        /// UnauthorizedAccessAttempt if not
+        /// </summary>
+        /// <typeparam name="T">type of right</typeparam>
+        /// <param name="right">the right user needs to pass the test</param>
+        public void CheckMethodInvocationRights<T>(T right)
+        {
+            StackTrace trace = new StackTrace();
+
+            if (!trace.GetFrame(1).GetMethod().CheckRequiredRights(right))
+                OnUnauthorizedAccessAttempt();
+        }
+
+        ///<summary>
+        /// Method makes check wheather the given type is decorated with
+        /// RequiredRightsAttribute and fires UnauthorizedAccessAttempt if it is not
+        ///</summary>
+        ///<param name="t">checked classes type</param>
+        /// <typeparam name="T">type of right</typeparam>
+        /// <param name="right">the right user needs to pass the test</param>
+        public void CheckClassAccessRights<T>(Type t, T right)
+        {
+            if(!t.CheckRequiredRights(right))
+                OnUnauthorizedAccessAttempt();
+        }
+
+        /// <summary>
+        /// Method checks wheather user is logged in and fires
+        /// UnloggedUserActionAttempt is not
+        /// </summary>
+        public abstract void CheckUserLogonStatus(string location);
+        #endregion
+
+        #region Events
+
+        ///<summary>
+        /// Event raised when unlogged user attempts an action which requires
+        /// logging in
+        ///</summary>
+        public static event UnloggedUseEventHandler UnloggedUserActionAttempt;
+
+        protected static void OnUnloggedUserActionAttempt(HttpRequest request, HttpResponse response)
+        {
+            UnloggedUseEventHandler handler = UnloggedUserActionAttempt;
+
+            if (handler != null)
+            {
+                handler(null, new UnloggedUserEventArgs(request, response));
+            }
+        }
+
+        ///<summary>
+        /// Event raised when user attempts an action which requires
+        /// rights he does not posess
+        ///</summary>
+        public static event EventHandler UnauthorizedAccessAttempt;
+
+        protected static void OnUnauthorizedAccessAttempt()
+        {
+            EventHandler handler = UnauthorizedAccessAttempt;
+
+            if (handler != null)
+            {
+                handler(null, new EventArgs());
+            }
+        }
+
         #endregion
     }
 }

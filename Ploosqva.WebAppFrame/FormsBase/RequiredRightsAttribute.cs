@@ -5,9 +5,9 @@ namespace Ploosqva.WebAppFrame.FormsBase
 {
     ///<summary>
     /// This attribute can be used to decorate objects with required right to access it.
-    /// For example it can allow controll over users accessing specific classes or methods
+    /// For example it can allow control over users accessing specific classes or methods
     ///</summary>
-    [AttributeUsage(AttributeTargets.All, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = true)]
     public class RequiredRightsAttribute : Attribute
     {
         internal List<object> Rights { get; set; }
