@@ -2,6 +2,8 @@
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using Gaia.WebWidgets;
+using LinkButton = System.Web.UI.WebControls.LinkButton;
 
 namespace Ploosqva.WebUtils.Controls
 {
@@ -23,6 +25,8 @@ namespace Ploosqva.WebUtils.Controls
                 ImageUrl = NextButtonImageUrl,
                 AlternateText = NextText
             };
+            if (!string.IsNullOrEmpty(UpdateControl))
+                (btnNext as Gaia.WebWidgets.ImageButton).Aspects.Add(new AspectUpdateControl(UpdateControl));
             (btnNext as WebControl).Style["float"] = "right";
 
             btnPrev = new Gaia.WebWidgets.ImageButton
@@ -31,6 +35,8 @@ namespace Ploosqva.WebUtils.Controls
                 ImageUrl = PrevButtonImageUrl,
                 AlternateText = PrevText
             };
+            if (!string.IsNullOrEmpty(UpdateControl))
+                (btnPrev as Gaia.WebWidgets.ImageButton).Aspects.Add(new AspectUpdateControl(UpdateControl));
             (btnPrev as WebControl).Style["float"] = "left";
 
             btnDownload = new LinkButton
@@ -49,9 +55,13 @@ namespace Ploosqva.WebUtils.Controls
             pageDiv.Controls.Add(imgDocumentPage);
 
             pager.CssClass = PagerDivCssClass;
+            pager.Controls.Add(new Literal { Text = "<table style=\"width:100%\"><tr><td>" });
             pager.Controls.Add(btnPrev as Control);
+            pager.Controls.Add(new Literal { Text = "</td><td style=\"text-align:center\">" });
             pager.Controls.Add(btnDownload as Control);
+            pager.Controls.Add(new Literal { Text = "</td><td style=\"text-align:right\">" });
             pager.Controls.Add(btnNext as Control);
+            pager.Controls.Add(new Literal { Text = "</td></tr></table>" });
 
             Controls.Add(pageDiv);
             Controls.Add(pager);
@@ -85,6 +95,21 @@ namespace Ploosqva.WebUtils.Controls
                 return (string)ViewState["PageDivCssClass"];
             }
             set { ViewState["PageDivCssClass"] = value; }
+        }
+
+        ///<summary>
+        /// ID of control used as update control for visualising ajax postbacks
+        ///</summary>
+        public string UpdateControl
+        {
+            get
+            {
+                if (ViewState["UpdateControl"] == null)
+                    return string.Empty;
+
+                return (string)ViewState["UpdateControl"];
+            }
+            set { ViewState["UpdateControl"] = value; }
         }
 
         protected override void Render(HtmlTextWriter writer)

@@ -46,10 +46,10 @@ namespace Ploosqva.WebAppFrame.Database
         /// <returns></returns>
         private static IConfiguration Configure()
         {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            String assemblyName = "Bizobjects.*, " + assembly.GetName().ToString().Substring(0, assembly.GetName().ToString().LastIndexOf("Version") - 2);
+            //Assembly assembly = Assembly.GetExecutingAssembly();
+            //String assemblyName = "Bizobjects.*, " + assembly.GetName().ToString().Substring(0, assembly.GetName().ToString().LastIndexOf("Version") - 2);
 
-            configuration.AddAlias(new WildcardAlias("Bizobjects.*, Bizobjects", assemblyName));
+            //configuration.AddAlias(new WildcardAlias("Bizobjects.*, Bizobjects", assemblyName));
 
             return configuration;
         }

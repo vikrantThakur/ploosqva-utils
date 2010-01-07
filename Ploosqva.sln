@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.WebAppFrame", "Plo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.UnitTests", "Ploosqva.UnitTests\Ploosqva.UnitTests.csproj", "{4B7335BF-25FC-423E-8F5A-B035DC3DC899}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.Db4oAppFrame", "Ploosqva.Db4oAppFrame\Ploosqva.Db4oAppFrame.csproj", "{BA581416-47DD-4B50-BDC4-D21BF1CAD0F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.MobileAppFrame", "Ploosqva.MobileAppFrame\Ploosqva.MobileAppFrame.csproj", "{58CA93CE-5427-44C7-B2A0-8ECE38177CB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.Pocket", "Ploosqva.Pocket\Ploosqva.Pocket.csproj", "{7F3B84A5-C20A-4EE6-BD82-9C9865A1BBEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +43,18 @@ Global
 		{4B7335BF-25FC-423E-8F5A-B035DC3DC899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B7335BF-25FC-423E-8F5A-B035DC3DC899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B7335BF-25FC-423E-8F5A-B035DC3DC899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA581416-47DD-4B50-BDC4-D21BF1CAD0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA581416-47DD-4B50-BDC4-D21BF1CAD0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA581416-47DD-4B50-BDC4-D21BF1CAD0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA581416-47DD-4B50-BDC4-D21BF1CAD0F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58CA93CE-5427-44C7-B2A0-8ECE38177CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58CA93CE-5427-44C7-B2A0-8ECE38177CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58CA93CE-5427-44C7-B2A0-8ECE38177CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58CA93CE-5427-44C7-B2A0-8ECE38177CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F3B84A5-C20A-4EE6-BD82-9C9865A1BBEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F3B84A5-C20A-4EE6-BD82-9C9865A1BBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F3B84A5-C20A-4EE6-BD82-9C9865A1BBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F3B84A5-C20A-4EE6-BD82-9C9865A1BBEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

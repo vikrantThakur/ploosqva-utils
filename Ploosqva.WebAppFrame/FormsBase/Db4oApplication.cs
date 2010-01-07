@@ -13,13 +13,13 @@ namespace Ploosqva.WebAppFrame.FormsBase
         protected int port;
         protected string user;
         protected string pass;
-        private IConfiguration config;
-        protected IConfiguration Config
+        protected IConfiguration config;
+        protected virtual IConfiguration Config
         {
             get
             {
                 if (config == null)
-                    config = Db4oFactory.Configure();
+                    config = Db4oFactory.NewConfiguration();
 
                 return config;
             }

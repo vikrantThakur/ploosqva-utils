@@ -1,4 +1,5 @@
 ﻿using Db4objects.Db4o;
+using Db4objects.Db4o.Config;
 
 namespace Ploosqva.WebAppFrame.Database
 {
@@ -24,9 +25,9 @@ namespace Ploosqva.WebAppFrame.Database
         /// <summary>
         /// Pobiera połączenie z bazą. Jeżeli dla tej sesji nie istniało, zostanie otwarte nowe
         /// </summary>
-        internal IObjectContainer GetDbClient()
+        internal IObjectContainer GetDbClient(IConfiguration config)
         {
-            return Db4oHttpModule.Client;
+            return Db4oHttpModule.GetClient(config);
         }
 
         /// <summary>
