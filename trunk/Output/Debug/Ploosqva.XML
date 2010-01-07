@@ -411,6 +411,11 @@
              Css class apllied to the page image wrapper
             </summary>
         </member>
+        <member name="P:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer.UpdateControl">
+            <summary>
+             ID of control used as update control for visualising ajax postbacks
+            </summary>
+        </member>
         <member name="P:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer.NextButtonImageUrl">
             <summary>
              Url of the "next slide" ImageButton.ImageUrl
@@ -571,17 +576,6 @@
              Initializes a new instance of the CaptchaImage class using the
              specified text, width and height.
             </summary>
-        </member>
-        <member name="T:Ploosqva.WebUtils.Security.PasswordHasher">
-            <summary>
-            Used to create hashes of diffenrent values
-            </summary>
-        </member>
-        <member name="M:Ploosqva.WebUtils.Security.PasswordHasher.HashPassword(System.String)">
-            <summary>
-            Creates an MD5 hash of the password
-            </summary>
-            <param name="pass">password string</param>
         </member>
         <member name="T:Ploosqva.DbUtils.Db4o.AutoIncrementFields">
             <summary>
@@ -880,6 +874,22 @@
         <member name="M:Ploosqva.ImageUtils.ImageResizer.GetMime(System.Drawing.Image)">
             <summary>
             Gets image's mime type
+            </summary>
+        </member>
+        <member name="T:Ploosqva.Security.MD5Hasher">
+            <summary>
+             Class used to use MD5 algorithm
+            </summary>
+        </member>
+        <member name="M:Ploosqva.Security.MD5Hasher.GetHash(System.String)">
+            <summary>
+             Hash an input string and return the hash as
+             a 32 character hexadecimal string.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.Security.MD5Hasher.VerifyHash(System.String,System.String)">
+            <summary>
+            Verify a hash against a string.
             </summary>
         </member>
     </members>

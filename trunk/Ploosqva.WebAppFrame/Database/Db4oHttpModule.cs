@@ -2,6 +2,7 @@
 using System.Net.Sockets;
 using System.Web;
 using Db4objects.Db4o;
+using Db4objects.Db4o.Config;
 
 namespace Ploosqva.WebAppFrame.Database
 {
@@ -23,6 +24,18 @@ namespace Ploosqva.WebAppFrame.Database
         private static string dbUser;
         private static string dbPass;
         private static bool isEmbeddedServer = true;
+        private static readonly IConfiguration config = Db4oFactory.NewConfiguration();
+
+        ///<summary>
+        /// Configuration used to open database clients
+        ///</summary>
+        public static IConfiguration Configuration
+        {
+            get
+            {
+                return config;
+            }
+        }
 
         ///<summary>
         /// Initializes database client connection parameters
@@ -40,7 +53,7 @@ namespace Ploosqva.WebAppFrame.Database
             if (!isServerEmbedded)
             {
                 if (port != null)
-                    dbPort = (int) port;
+                    dbPort = (int)port;
 
                 if (!string.IsNullOrEmpty(host))
                     dbHost = host;
@@ -60,44 +73,41 @@ namespace Ploosqva.WebAppFrame.Database
         /// <param name="application">application class</param>
         public void Init(HttpApplication application)
         {
-            application.EndRequest += Application_EndRequest;            
+            application.EndRequest += Application_EndRequest;
         }
 
         /// <summary>
         /// Returns an existing client connection to the caller. 
         /// If client connection does not exist - it will be created
         /// </summary>
-        public static IObjectContainer Client
+        public static IObjectContainer GetClient(IConfiguration configuration)
         {
-            get
+            HttpContext context = HttpContext.Current;
+
+            IObjectContainer objectClient = context.Items[KEY_DB4O_CLIENT] as IObjectContainer;
+
+            if (objectClient == null)
             {
-                HttpContext context = HttpContext.Current;
-
-                IObjectContainer objectClient = context.Items[KEY_DB4O_CLIENT] as IObjectContainer;
-
-                if (objectClient == null)
+                /// If opening the database fails, it can mean that wrong port is set or
+                /// that the main web app is not running
+                try
                 {
-                    /// If opening the database fails, it can mean that wrong port is set or
-                    /// that the main web app is not running
-                    try
-                    {
-                        if (isEmbeddedServer)
-                            objectClient = Db4oServerModule.Server.OpenClient();
-                        else
-                            objectClient = Db4oFactory.OpenClient(dbHost, dbPort, dbUser, dbPass);
-                    }
-                    catch (SocketException)
-                    {
-                        throw new Exception(string.Format("Cannot connect to database. "
-                            + "Is the db4o server running on {1} and listening on port {0}?",
-                            dbPort, dbHost));
-                    }
-
-                    context.Items[KEY_DB4O_CLIENT] = objectClient;
+                    if (isEmbeddedServer)
+                        objectClient = Db4oServerModule.Server.OpenClient(configuration);
+                    else
+                        objectClient = Db4oFactory.OpenClient(configuration, dbHost, dbPort, dbUser, dbPass);
+                }
+                catch (SocketException)
+                {
+                    throw new Exception(string.Format("Cannot connect to database. "
+                        + "Is the db4o server running on {1} and listening on port {0}?",
+                        dbPort, dbHost));
                 }
 
-                return objectClient;
+                context.Items[KEY_DB4O_CLIENT] = objectClient;
             }
+
+            return objectClient;
         }
 
         /// <summary>

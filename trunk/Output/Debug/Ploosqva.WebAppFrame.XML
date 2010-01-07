@@ -14,11 +14,6 @@
             The application's controller
             </summary>
         </member>
-        <member name="F:Ploosqva.WebAppFrame.DbFacade.FacadeBase.objectContainer">
-            <summary>
-            The database client class used by SessionManager to access the database
-            </summary>
-        </member>
         <member name="M:Ploosqva.WebAppFrame.DbFacade.FacadeBase.CloseDatabaseServer">
             <summary>
             Commits all changes and closes the database
@@ -45,12 +40,6 @@
             <param name="t">checked classes type</param>
              <typeparam name="T">type of right</typeparam>
              <param name="right">the right user needs to pass the test</param>
-        </member>
-        <member name="M:Ploosqva.WebAppFrame.DbFacade.FacadeBase.CheckUserLogonStatus(System.String)">
-            <summary>
-            Method checks wheather user is logged in and fires
-            UnloggedUserActionAttempt is not
-            </summary>
         </member>
         <member name="P:Ploosqva.WebAppFrame.DbFacade.FacadeBase.Db4oClient">
             <summary>
@@ -149,6 +138,12 @@
             <returns>true if class is not decorated with RequiredRightsAttribute or one of 
              the attributes contains required right or false if none of them do</returns>
         </member>
+        <member name="T:Ploosqva.WebAppFrame.DbFacade.UnloggedUserEventHandler">
+            <summary>
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
         <member name="T:Ploosqva.WebAppFrame.FormsBase.Db4oEnabledPageBase">
             <summary>
             </summary>
@@ -189,6 +184,12 @@
             </summary>
             <param name="application">application class</param>
         </member>
+        <member name="M:Ploosqva.WebAppFrame.Database.Db4oHttpModule.GetClient(Db4objects.Db4o.Config.IConfiguration)">
+            <summary>
+            Returns an existing client connection to the caller. 
+            If client connection does not exist - it will be created
+            </summary>
+        </member>
         <member name="M:Ploosqva.WebAppFrame.Database.Db4oHttpModule.Application_EndRequest(System.Object,System.EventArgs)">
             <summary>
             Closes db4o client on request end
@@ -196,10 +197,9 @@
             <param name="sender">The HttpApplication</param>
             <param name="e"></param>
         </member>
-        <member name="P:Ploosqva.WebAppFrame.Database.Db4oHttpModule.Client">
+        <member name="P:Ploosqva.WebAppFrame.Database.Db4oHttpModule.Configuration">
             <summary>
-            Returns an existing client connection to the caller. 
-            If client connection does not exist - it will be created
+             Configuration used to open database clients
             </summary>
         </member>
         <member name="M:Ploosqva.WebAppFrame.Database.Controller.GetController">
@@ -207,7 +207,7 @@
             Creates a Controller and returns it
             </summary>
         </member>
-        <member name="M:Ploosqva.WebAppFrame.Database.Controller.GetDbClient">
+        <member name="M:Ploosqva.WebAppFrame.Database.Controller.GetDbClient(Db4objects.Db4o.Config.IConfiguration)">
             <summary>
             Pobiera połączenie z bazą. Jeżeli dla tej sesji nie istniało, zostanie otwarte nowe
             </summary>
@@ -254,12 +254,6 @@
             <summary>
              Response object current for the http request which fired this event
             </summary>
-        </member>
-        <member name="T:Ploosqva.WebAppFrame.DbFacade.UnloggedUserEventHandler">
-            <summary>
-            </summary>
-            <param name="sender"></param>
-            <param name="args"></param>
         </member>
     </members>
 </doc>
