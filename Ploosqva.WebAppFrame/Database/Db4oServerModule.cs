@@ -85,7 +85,7 @@ namespace Ploosqva.WebAppFrame.Database
             if (!File.Exists(dbFilePath))
                 newDb = true;
 
-            objectServer = Db4oFactory.OpenServer(Configure(), dbFilePath, dbPort);
+            objectServer = Db4oFactory.OpenServer(configuration, dbFilePath, dbPort);
 
             if (newDb)
             {

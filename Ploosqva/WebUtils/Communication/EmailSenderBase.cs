@@ -1,29 +1,26 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Net.Mail;
 
 namespace Ploosqva.WebUtils.Communication
 {
-    /// <summary>
-    /// Used to send email via a local IIS SMTP service
-    /// </summary>
-    public class LocalhostEmailSender : EmailSenderBase
+    public abstract class EmailSenderBase : IMessageSender
     {
-        /// <summary>
-        /// Port used by the smtp server. Default is 25
-        /// </summary>
-        public static int port = 25;
+        protected SmtpClient smtpClient;
+        protected string lastExceptionMessage;
+        protected string lastExceptionStackTrace;
 
-        ///<summary>
-        /// Creates a new SmtpClient using localhost and
-        /// port set by static <see cref="port"/> field
-        ///</summary>
-        public LocalhostEmailSender()
+        public string LastExceptionMessage
         {
-            smtpClient = new SmtpClient("localhost", port);
+            get { return lastExceptionMessage; }
         }
 
-        public override bool Send(MailMessage msg)
+        public string LastExceptionStackTrace
+        {
+            get { return lastExceptionStackTrace; }
+        }
+
+        public virtual bool Send(MailMessage msg)
         {
             try
             {
@@ -39,7 +36,7 @@ namespace Ploosqva.WebUtils.Communication
             return true;
         }
 
-        public override bool SendWithAttachments(MailMessage msg, Stream[] attachmentStreams)
+        public virtual bool SendWithAttachments(MailMessage msg, Stream[] attachmentStreams)
         {
             try
             {

@@ -124,6 +124,22 @@
              HttpHandler, which shows a captcha image
             </summary>
         </member>
+        <member name="T:Ploosqva.Security.MD5Hasher">
+            <summary>
+             Class used to use MD5 algorithm
+            </summary>
+        </member>
+        <member name="M:Ploosqva.Security.MD5Hasher.GetHash(System.String)">
+            <summary>
+             Hash an input string and return the hash as
+             a 32 character hexadecimal string.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.Security.MD5Hasher.VerifyHash(System.String,System.String)">
+            <summary>
+            Verify a hash against a string.
+            </summary>
+        </member>
         <member name="T:Ploosqva.WebUtils.Controls.CaptchaImageControl">
             <summary>
              Represents an ImagButton, which shows a captcha image
@@ -530,36 +546,6 @@
              Random string generated
             </summary>
         </member>
-        <member name="T:Ploosqva.WebUtils.Communication.IMessageSender">
-            <summary>
-            Defines methods for sending email messages
-            </summary>
-        </member>
-        <member name="M:Ploosqva.WebUtils.Communication.IMessageSender.Send(System.Net.Mail.MailMessage)">
-            <summary>
-             Sends an email message
-            </summary>
-            <param name="msg">email message to send</param>
-            <returns>true if sending is successful</returns>
-        </member>
-        <member name="M:Ploosqva.WebUtils.Communication.IMessageSender.SendWithAttachments(System.Net.Mail.MailMessage,System.IO.Stream[])">
-            <summary>
-            Sends a mail message with attachments
-            </summary>
-            <param name="msg">email message to send</param>
-            <param name="attachmentStreams">array of attachment streams</param>
-            <returns>true if sending is successful</returns>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Communication.IMessageSender.LastExceptionMessage">
-            <summary>
-            If sending fails, exception message is stored here
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Communication.IMessageSender.LastExceptionStackTrace">
-            <summary>
-            If sending fails, exception stack trace is stored here
-            </summary>
-        </member>
         <member name="T:Ploosqva.ImageUtils.CaptchaImage">
             <summary>
             Summary description for CaptchaImage.
@@ -815,6 +801,36 @@
             Used to send email via a local IIS SMTP service
             </summary>
         </member>
+        <member name="T:Ploosqva.WebUtils.Communication.IMessageSender">
+            <summary>
+            Defines methods for sending email messages
+            </summary>
+        </member>
+        <member name="M:Ploosqva.WebUtils.Communication.IMessageSender.Send(System.Net.Mail.MailMessage)">
+            <summary>
+             Sends an email message
+            </summary>
+            <param name="msg">email message to send</param>
+            <returns>true if sending is successful</returns>
+        </member>
+        <member name="M:Ploosqva.WebUtils.Communication.IMessageSender.SendWithAttachments(System.Net.Mail.MailMessage,System.IO.Stream[])">
+            <summary>
+            Sends a mail message with attachments
+            </summary>
+            <param name="msg">email message to send</param>
+            <param name="attachmentStreams">array of attachment streams</param>
+            <returns>true if sending is successful</returns>
+        </member>
+        <member name="P:Ploosqva.WebUtils.Communication.IMessageSender.LastExceptionMessage">
+            <summary>
+            If sending fails, exception message is stored here
+            </summary>
+        </member>
+        <member name="P:Ploosqva.WebUtils.Communication.IMessageSender.LastExceptionStackTrace">
+            <summary>
+            If sending fails, exception stack trace is stored here
+            </summary>
+        </member>
         <member name="F:Ploosqva.WebUtils.Communication.LocalhostEmailSender.port">
             <summary>
             Port used by the smtp server. Default is 25
@@ -874,22 +890,6 @@
         <member name="M:Ploosqva.ImageUtils.ImageResizer.GetMime(System.Drawing.Image)">
             <summary>
             Gets image's mime type
-            </summary>
-        </member>
-        <member name="T:Ploosqva.Security.MD5Hasher">
-            <summary>
-             Class used to use MD5 algorithm
-            </summary>
-        </member>
-        <member name="M:Ploosqva.Security.MD5Hasher.GetHash(System.String)">
-            <summary>
-             Hash an input string and return the hash as
-             a 32 character hexadecimal string.
-            </summary>
-        </member>
-        <member name="M:Ploosqva.Security.MD5Hasher.VerifyHash(System.String,System.String)">
-            <summary>
-            Verify a hash against a string.
             </summary>
         </member>
     </members>

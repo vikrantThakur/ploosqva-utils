@@ -97,9 +97,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\DESCryptography.cs" />
     <Compile Include="Security\MD5Hasher.cs" />
+    <Compile Include="WebUtils\Communication\EmailSenderBase.cs" />
+    <Compile Include="WebUtils\Communication\RemoteEmailSender.cs" />
     <Compile Include="WebUtils\Controls\GaiaAjaxPdfViewer.cs" />
     <Compile Include="WebUtils\Handlers\CaptchaImageHandler.cs" />
-    <Compile Include="WebUtils\Communication\IEmailSender.cs" />
+    <Compile Include="WebUtils\Communication\IMessageSender.cs" />
     <Compile Include="WebUtils\Communication\LocalhostEmailSender.cs" />
     <Compile Include="WebUtils\Controls\CaptchaImageControl.cs" />
     <Compile Include="WebUtils\Controls\PdfViewerControlBase.cs" />
