@@ -118,14 +118,14 @@ namespace Ploosqva.ProjectBase.NHibernate.Fluent
         /// </summary>
         public void CommitChanges()
         {
-            if (FluentNhSessionManager.Instance.HasOpenTransaction())
+            if (FluentNHSessionManager.Instance.HasOpenTransaction())
             {
-                FluentNhSessionManager.Instance.CommitTransaction();
+                FluentNHSessionManager.Instance.CommitTransaction();
             }
             else
             {
                 // If there's no transaction, just flush the changes
-                FluentNhSessionManager.Instance.GetSession().Flush();
+                FluentNHSessionManager.Instance.GetSession().Flush();
             }
         }
 
@@ -136,7 +136,7 @@ namespace Ploosqva.ProjectBase.NHibernate.Fluent
         {
             get
             {
-                return FluentNhSessionManager.Instance.GetSession();
+                return FluentNHSessionManager.Instance.GetSession();
             }
         }
 

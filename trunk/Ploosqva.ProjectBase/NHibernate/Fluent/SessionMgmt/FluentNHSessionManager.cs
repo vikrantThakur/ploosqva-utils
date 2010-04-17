@@ -13,7 +13,7 @@ namespace Ploosqva.ProjectBase.NHibernate.Fluent.SessionMgmt
     /// from Chapter 8 of Hibernate in Action by Bauer and King.  Although it is a sealed singleton
     /// you can use TypeMock (http://www.typemock.com) for more flexible testing.
     /// </summary>
-    public sealed class FluentNhSessionManager
+    public sealed class FluentNHSessionManager
     {
         #region Thread-safe, lazy Singleton
 
@@ -21,7 +21,7 @@ namespace Ploosqva.ProjectBase.NHibernate.Fluent.SessionMgmt
         /// This is a thread-safe, lazy singleton.  See http://www.yoda.arachsys.com/csharp/singleton.html
         /// for more details about its implementation.
         /// </summary>
-        public static FluentNhSessionManager Instance
+        public static FluentNHSessionManager Instance
         {
             get
             {
@@ -32,7 +32,7 @@ namespace Ploosqva.ProjectBase.NHibernate.Fluent.SessionMgmt
         /// <summary>
         /// Initializes the NHibernate session factory upon instantiation.
         /// </summary>
-        private FluentNhSessionManager()
+        private FluentNHSessionManager()
         {
             InitSessionFactory();
         }
@@ -42,8 +42,8 @@ namespace Ploosqva.ProjectBase.NHibernate.Fluent.SessionMgmt
         /// </summary>
         private static class Nested
         {
-            internal static readonly FluentNhSessionManager FluentNhSessionManager =
-                new FluentNhSessionManager();
+            internal static readonly FluentNHSessionManager FluentNhSessionManager =
+                new FluentNHSessionManager();
         }
 
         #endregion
@@ -176,7 +176,7 @@ namespace Ploosqva.ProjectBase.NHibernate.Fluent.SessionMgmt
             }
         }
 
-        public static object Config { set; get; }
+        public static FluentConfiguration Config { set; get; }
 
         /// <summary>
         /// If within a web context, this uses <see cref="HttpContext" /> instead of the WinForms 
