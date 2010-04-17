@@ -342,119 +342,39 @@
             </summary>
             <param name="resourcePath">Full qualified path to resx file (as used by System.Resources.ResourceManager constructor)</param>
         </member>
-        <member name="T:Ploosqva.ImageUtils.PdfToImage">
-            <summary>
-             Static class wich converts pdf pages to jpeg images
-            </summary>
-        </member>
-        <member name="M:Ploosqva.ImageUtils.PdfToImage.Convert(System.String,System.Int32)">
-            <summary>
-            Converts a single page from a pdf file to jpeg image
-            </summary>
-            <param name="pdfDocumentPath">path to pfd document</param>
-            <param name="pageNum">0-based page number</param>
-            <returns>converted page</returns>
-        </member>
         <member name="T:Ploosqva.WebUtils.Platnosci.pl.InvalidParamException">
             <summary>
             Thrown, when a mandatory parameter has not been set for a payment or is invalid
             </summary>
         </member>
-        <member name="T:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer">
+        <member name="T:Ploosqva.WebUtils.Communication.IMessageSender">
             <summary>
-             Simple pdf viewer using Gaia Ajax controls
+            Defines methods for sending email messages
             </summary>
         </member>
-        <member name="T:Ploosqva.WebUtils.Controls.PdfViewerControlBase">
+        <member name="M:Ploosqva.WebUtils.Communication.IMessageSender.Send(System.Net.Mail.MailMessage)">
             <summary>
-            Abstract class for building a (simple) pdf viewer containing a single pdf page
-            and prev/next navigation buttons. To create a simpliest functioning viewer, inherit this class
-            and instantiate protected fields
+             Sends an email message
+            </summary>
+            <param name="msg">email message to send</param>
+            <returns>true if sending is successful</returns>
+        </member>
+        <member name="M:Ploosqva.WebUtils.Communication.IMessageSender.SendWithAttachments(System.Net.Mail.MailMessage,System.IO.Stream[])">
+            <summary>
+            Sends a mail message with attachments
+            </summary>
+            <param name="msg">email message to send</param>
+            <param name="attachmentStreams">array of attachment streams</param>
+            <returns>true if sending is successful</returns>
+        </member>
+        <member name="P:Ploosqva.WebUtils.Communication.IMessageSender.LastExceptionMessage">
+            <summary>
+            If sending fails, exception message is stored here
             </summary>
         </member>
-        <member name="M:Ploosqva.WebUtils.Controls.PdfViewerControlBase.DownloadPdfDocument">
+        <member name="P:Ploosqva.WebUtils.Communication.IMessageSender.LastExceptionStackTrace">
             <summary>
-            Sends the pdf file to the current Response
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.PdfViewerControlBase.PdfPageUrl">
-            <summary>
-            Address of a PdfPageImageHandler as set in web.config
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.PdfViewerControlBase.CurrentPage">
-            <summary>
-            Self-explanatory: gets or sets currently displayed page
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.PdfViewerControlBase.PagesCount">
-            <summary>
-            Gets number of pages in document
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.PdfViewerControlBase.PdfDocPath">
-            <summary>
-            Gets or rest physical of the pdf file
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.PdfViewerControlBase.PageWidth">
-            <summary>
-             Width of the generated pdf page image
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.PdfViewerControlBase.PageHeight">
-            <summary>
-             Height of the generated pdf page image
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.PdfViewerControlBase.TagKey">
-            <summary>
-            Makes control render as div instead of span
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.PdfViewerControlBase.PdfTitle">
-            <summary>
-             Document's title
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer.PagerDivCssClass">
-            <summary>
-             Css class applied to the pager wrapper
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer.PageDivCssClass">
-            <summary>
-             Css class apllied to the page image wrapper
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer.UpdateControl">
-            <summary>
-             ID of control used as update control for visualising ajax postbacks
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer.NextButtonImageUrl">
-            <summary>
-             Url of the "next slide" ImageButton.ImageUrl
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer.PrevButtonImageUrl">
-            <summary>
-             Url of the "previous slide" ImageButton.ImageUrl
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer.DownloadText">
-            <summary>
-             Text displayed on the pdf file download link/button
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer.PrevText">
-            <summary>
-             Text displayed on the "previous slide" link/button
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Controls.GaiaImageButtonPdfViewer.NextText">
-            <summary>
-             Text displayed on the "next slide" link/button
+            If sending fails, exception stack trace is stored here
             </summary>
         </member>
         <member name="T:Ploosqva.Security.DESCryptography">
@@ -563,17 +483,202 @@
              specified text, width and height.
             </summary>
         </member>
-        <member name="T:Ploosqva.DbUtils.Db4o.AutoIncrementFields">
+        <member name="T:Ploosqva.DesignByContract.Check">
+             <summary>
+             Design By Contract Checks.
+             
+             Each method generates an exception or
+             a trace assertion statement if the contract is broken.
+             </summary>
+             <remarks>
+             This example shows how to call the Require method.
+             <code>
+             public void Test(int x)
+             {
+             	try
+             	{
+            			Check.Require(x > 1, "x must be > 1");
+            		}
+            		catch (System.Exception ex)
+            		{
+            			Console.WriteLine(ex.ToString());
+            		}
+            	}
+             </code>
+            
+             You can direct output to a Trace listener. For example, you could insert
+             <code>
+             Trace.Listeners.Clear();
+             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+             </code>
+             
+             or direct output to a file or the Event Log.
+             
+             (Note: For ASP.NET clients use the Listeners collection
+             of the Debug, not the Trace, object and, for a Release build, only exception-handling
+             is possible.)
+             </remarks>
+             
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Require(System.Boolean,System.String)">
             <summary>
-            Allows creation of autmatically incrementing integer field in db4o persisted classes
+            Precondition check - should run regardless of preprocessor directives.
             </summary>
         </member>
-        <member name="M:Ploosqva.DbUtils.Db4o.AutoIncrementFields.GetNextId(Db4objects.Db4o.IObjectContainer,System.String)">
+        <member name="M:Ploosqva.DesignByContract.Check.Require(System.Boolean,System.String,System.Exception)">
             <summary>
-            Gets next availabe id from database
+            Precondition check - should run regardless of preprocessor directives.
             </summary>
-            <param name="db">db4o database client</param>
-            <param name="counterIndex">index of this autoincrement value (could be a type name)</param>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Require(System.Boolean)">
+            <summary>
+            Precondition check - should run regardless of preprocessor directives.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Ensure(System.Boolean,System.String)">
+            <summary>
+            Postcondition check.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Ensure(System.Boolean,System.String,System.Exception)">
+            <summary>
+            Postcondition check.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Ensure(System.Boolean)">
+            <summary>
+            Postcondition check.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Invariant(System.Boolean,System.String)">
+            <summary>
+            Invariant check.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Invariant(System.Boolean,System.String,System.Exception)">
+            <summary>
+            Invariant check.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Invariant(System.Boolean)">
+            <summary>
+            Invariant check.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Assert(System.Boolean,System.String)">
+            <summary>
+            Assertion check.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Assert(System.Boolean,System.String,System.Exception)">
+            <summary>
+            Assertion check.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.Check.Assert(System.Boolean)">
+            <summary>
+            Assertion check.
+            </summary>
+        </member>
+        <member name="P:Ploosqva.DesignByContract.Check.UseAssertions">
+            <summary>
+            Set this if you wish to use Trace Assert statements 
+            instead of exception handling. 
+            (The Check class uses exception handling by default.)
+            </summary>
+        </member>
+        <member name="P:Ploosqva.DesignByContract.Check.UseExceptions">
+            <summary>
+            Is exception handling being used?
+            </summary>
+        </member>
+        <member name="T:Ploosqva.DesignByContract.DesignByContractException">
+            <summary>
+            Exception raised when a contract is broken.
+            Catch this exception type if you wish to differentiate between 
+            any DesignByContract exception and other runtime exceptions.
+             
+            </summary>
+        </member>
+        <member name="T:Ploosqva.DesignByContract.PreconditionException">
+            <summary>
+            Exception raised when a precondition fails.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.PreconditionException.#ctor">
+            <summary>
+            Precondition Exception.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.PreconditionException.#ctor(System.String)">
+            <summary>
+            Precondition Exception.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.PreconditionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Precondition Exception.
+            </summary>
+        </member>
+        <member name="T:Ploosqva.DesignByContract.PostconditionException">
+            <summary>
+            Exception raised when a postcondition fails.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.PostconditionException.#ctor">
+            <summary>
+            Postcondition Exception.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.PostconditionException.#ctor(System.String)">
+            <summary>
+            Postcondition Exception.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.PostconditionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Postcondition Exception.
+            </summary>
+        </member>
+        <member name="T:Ploosqva.DesignByContract.InvariantException">
+            <summary>
+            Exception raised when an invariant fails.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.InvariantException.#ctor">
+            <summary>
+            Invariant Exception.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.InvariantException.#ctor(System.String)">
+            <summary>
+            Invariant Exception.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.InvariantException.#ctor(System.String,System.Exception)">
+            <summary>
+            Invariant Exception.
+            </summary>
+        </member>
+        <member name="T:Ploosqva.DesignByContract.AssertionException">
+            <summary>
+            Exception raised when an assertion fails.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.AssertionException.#ctor">
+            <summary>
+            Assertion Exception.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.AssertionException.#ctor(System.String)">
+            <summary>
+            Assertion Exception.
+            </summary>
+        </member>
+        <member name="M:Ploosqva.DesignByContract.AssertionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Assertion Exception.
+            </summary>
         </member>
         <member name="T:Ploosqva.WebUtils.Communication.RemotePost">
             <summary>
@@ -786,49 +891,9 @@
             Login of payback user, who will receive points
             </summary>
         </member>
-        <member name="T:Ploosqva.WebUtils.Handlers.PdfPageImageHandler">
-            <summary>
-            Handler which displays an image of the requested page.
-            It requires page, doc, w and h query strings.
-            <br/>
-            page - nage number (int)<br/>
-            doc - base64-encoded file path<br/>
-            w, h - width and height
-            </summary>
-        </member>
         <member name="T:Ploosqva.WebUtils.Communication.LocalhostEmailSender">
             <summary>
             Used to send email via a local IIS SMTP service
-            </summary>
-        </member>
-        <member name="T:Ploosqva.WebUtils.Communication.IMessageSender">
-            <summary>
-            Defines methods for sending email messages
-            </summary>
-        </member>
-        <member name="M:Ploosqva.WebUtils.Communication.IMessageSender.Send(System.Net.Mail.MailMessage)">
-            <summary>
-             Sends an email message
-            </summary>
-            <param name="msg">email message to send</param>
-            <returns>true if sending is successful</returns>
-        </member>
-        <member name="M:Ploosqva.WebUtils.Communication.IMessageSender.SendWithAttachments(System.Net.Mail.MailMessage,System.IO.Stream[])">
-            <summary>
-            Sends a mail message with attachments
-            </summary>
-            <param name="msg">email message to send</param>
-            <param name="attachmentStreams">array of attachment streams</param>
-            <returns>true if sending is successful</returns>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Communication.IMessageSender.LastExceptionMessage">
-            <summary>
-            If sending fails, exception message is stored here
-            </summary>
-        </member>
-        <member name="P:Ploosqva.WebUtils.Communication.IMessageSender.LastExceptionStackTrace">
-            <summary>
-            If sending fails, exception stack trace is stored here
             </summary>
         </member>
         <member name="F:Ploosqva.WebUtils.Communication.LocalhostEmailSender.port">
