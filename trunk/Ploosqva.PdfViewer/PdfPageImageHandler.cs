@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.SessionState;
 using Ploosqva.ImageUtils;
 
-namespace Ploosqva.WebUtils.Handlers
+namespace Ploosqva.PdfViewer
 {
     /// <summary>
     /// Handler which displays an image of the requested page.

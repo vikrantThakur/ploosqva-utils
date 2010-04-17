@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.IO;
 
-namespace Ploosqva.ImageUtils
+namespace Ploosqva.PdfViewer
 {
     ///<summary>
     /// Static class wich converts pdf pages to jpeg images

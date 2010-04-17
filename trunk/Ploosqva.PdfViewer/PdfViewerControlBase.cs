@@ -5,7 +5,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using iTextSharp.text.pdf;
 
-namespace Ploosqva.WebUtils.Controls
+namespace Ploosqva.PdfViewer
 {
     /// <summary>
     /// Abstract class for building a (simple) pdf viewer containing a single pdf page
@@ -106,8 +106,8 @@ namespace Ploosqva.WebUtils.Controls
         {
             if (PdfDocPath != null)
                 imgDocumentPage.ImageUrl = string.Format("{0}?page={2}&h={3}&w={4}&doc={1}", PdfPageUrl,
-                    Convert.ToBase64String(Encoding.UTF8.GetBytes(PdfDocPath)),
-                    CurrentPage, PageHeight.Value, PageWidth.Value);
+                                                         Convert.ToBase64String(Encoding.UTF8.GetBytes(PdfDocPath)),
+                                                         CurrentPage, PageHeight.Value, PageWidth.Value);
             (btnNext as WebControl).Enabled = CurrentPage != PagesCount - 1;
             (btnPrev as WebControl).Enabled = CurrentPage != 0;
 

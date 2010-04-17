@@ -32,37 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Db4objects.Db4o, Version=7.4.106.13438, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\Db4objects.Db4o.dll</HintPath>
-    </Reference>
-    <Reference Include="Db4objects.Db4o.Linq, Version=7.4.106.13438, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\Db4objects.Db4o.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="Gaia.WebWidgets, Version=3.6.834.1, Culture=neutral, PublicKeyToken=e3fc7cc7a1b1114a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\Gaia.WebWidgets.dll</HintPath>
-    </Reference>
-    <Reference Include="Gaia.WebWidgets.Effects, Version=3.6.834.1, Culture=neutral, PublicKeyToken=e3fc7cc7a1b1114a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\Gaia.WebWidgets.Effects.dll</HintPath>
-    </Reference>
-    <Reference Include="Gaia.WebWidgets.Extensions, Version=3.6.834.1, Culture=neutral, PublicKeyToken=e3fc7cc7a1b1114a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\Gaia.WebWidgets.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Gouda.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\Gouda.Api.dll</HintPath>
-    </Reference>
     <Reference Include="ImageManipulation, Version=1.0.3242.37438, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\ImageManipulation.dll</HintPath>
-    </Reference>
-    <Reference Include="itextsharp, Version=4.1.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -87,9 +59,8 @@
     <Compile Include="ClassUtils\EnumLocalizer.cs" />
     <Compile Include="ClassUtils\ResourcePathAttribute.cs" />
     <Compile Include="ClassUtils\String\RandomString.cs" />
-    <Compile Include="DbUtils\Db4o\AutoIncrementFields.cs" />
+    <Compile Include="DesignByContract\DesignByContract.cs" />
     <Compile Include="GeneralUtils\ISettingsManager.cs" />
-    <Compile Include="ImageUtils\PdfToImage.cs" />
     <Compile Include="GeneralUtils\ShortGuid.cs" />
     <Compile Include="GeneralUtils\XmlSettingsManager.cs" />
     <Compile Include="ImageUtils\CaptchaImage.cs" />
@@ -99,15 +70,12 @@
     <Compile Include="Security\MD5Hasher.cs" />
     <Compile Include="WebUtils\Communication\EmailSenderBase.cs" />
     <Compile Include="WebUtils\Communication\RemoteEmailSender.cs" />
-    <Compile Include="WebUtils\Controls\GaiaAjaxPdfViewer.cs" />
     <Compile Include="WebUtils\Handlers\CaptchaImageHandler.cs" />
     <Compile Include="WebUtils\Communication\IMessageSender.cs" />
     <Compile Include="WebUtils\Communication\LocalhostEmailSender.cs" />
     <Compile Include="WebUtils\Controls\CaptchaImageControl.cs" />
-    <Compile Include="WebUtils\Controls\PdfViewerControlBase.cs" />
     <Compile Include="WebUtils\Controls\ValidationControl.cs" />
     <Compile Include="WebUtils\JavascriptAlert.cs" />
-    <Compile Include="WebUtils\Handlers\PdfPageImageHandler.cs" />
     <Compile Include="WebUtils\Platnosci.pl\CharacterEncoding.cs" />
     <Compile Include="WebUtils\Platnosci.pl\InvalidParamException.cs" />
     <Compile Include="WebUtils\Platnosci.pl\OnlinePayment.cs" />

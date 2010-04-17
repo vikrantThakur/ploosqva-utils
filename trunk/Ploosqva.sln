@@ -17,6 +17,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.MobileAppFrame", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.Pocket", "Ploosqva.Pocket\Ploosqva.Pocket.csproj", "{7F3B84A5-C20A-4EE6-BD82-9C9865A1BBEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.ProjectBase", "Ploosqva.ProjectBase\Ploosqva.ProjectBase.csproj", "{29362301-FE5F-4F51-B685-AD566CE66E77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.GaiaUtils", "Ploosqva.GaiaUtils\Ploosqva.GaiaUtils.csproj", "{98DBE795-D641-40E2-8DC9-3E1606ECE7D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.Db4oUtils", "Ploosqva.Db4oUtils\Ploosqva.Db4oUtils.csproj", "{F3639419-5CC7-4EB6-981C-83E19CFD76BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ploosqva.PdfViewer", "Ploosqva.PdfViewer\Ploosqva.PdfViewer.csproj", "{4BF4BDFD-A303-44B1-80E4-CD03772390A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +63,22 @@ Global
 		{7F3B84A5-C20A-4EE6-BD82-9C9865A1BBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F3B84A5-C20A-4EE6-BD82-9C9865A1BBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F3B84A5-C20A-4EE6-BD82-9C9865A1BBEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29362301-FE5F-4F51-B685-AD566CE66E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29362301-FE5F-4F51-B685-AD566CE66E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29362301-FE5F-4F51-B685-AD566CE66E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29362301-FE5F-4F51-B685-AD566CE66E77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98DBE795-D641-40E2-8DC9-3E1606ECE7D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98DBE795-D641-40E2-8DC9-3E1606ECE7D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98DBE795-D641-40E2-8DC9-3E1606ECE7D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98DBE795-D641-40E2-8DC9-3E1606ECE7D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3639419-5CC7-4EB6-981C-83E19CFD76BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3639419-5CC7-4EB6-981C-83E19CFD76BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3639419-5CC7-4EB6-981C-83E19CFD76BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3639419-5CC7-4EB6-981C-83E19CFD76BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF4BDFD-A303-44B1-80E4-CD03772390A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF4BDFD-A303-44B1-80E4-CD03772390A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF4BDFD-A303-44B1-80E4-CD03772390A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF4BDFD-A303-44B1-80E4-CD03772390A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,9 +3,10 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using Gaia.WebWidgets;
+using Ploosqva.PdfViewer;
 using LinkButton = System.Web.UI.WebControls.LinkButton;
 
-namespace Ploosqva.WebUtils.Controls
+namespace Ploosqva.GaiaUtils.Controls
 {
     ///<summary>
     /// Simple pdf viewer using Gaia Ajax controls
@@ -20,30 +21,30 @@ namespace Ploosqva.WebUtils.Controls
             imgDocumentPage = new Gaia.WebWidgets.Image();
 
             btnNext = new Gaia.WebWidgets.ImageButton
-            {
-                ID = "nextButton",
-                ImageUrl = NextButtonImageUrl,
-                AlternateText = NextText
-            };
+                          {
+                              ID = "nextButton",
+                              ImageUrl = NextButtonImageUrl,
+                              AlternateText = NextText
+                          };
             if (!string.IsNullOrEmpty(UpdateControl))
                 (btnNext as Gaia.WebWidgets.ImageButton).Aspects.Add(new AspectUpdateControl(UpdateControl));
             (btnNext as WebControl).Style["float"] = "right";
 
             btnPrev = new Gaia.WebWidgets.ImageButton
-            {
-                ID = "prevButton",
-                ImageUrl = PrevButtonImageUrl,
-                AlternateText = PrevText
-            };
+                          {
+                              ID = "prevButton",
+                              ImageUrl = PrevButtonImageUrl,
+                              AlternateText = PrevText
+                          };
             if (!string.IsNullOrEmpty(UpdateControl))
                 (btnPrev as Gaia.WebWidgets.ImageButton).Aspects.Add(new AspectUpdateControl(UpdateControl));
             (btnPrev as WebControl).Style["float"] = "left";
 
             btnDownload = new LinkButton
-            {
-                ID = "downloadButton",
-                Text = DownloadText
-            };
+                              {
+                                  ID = "downloadButton",
+                                  Text = DownloadText
+                              };
 
             base.OnInit(e);
         }
