@@ -44,9 +44,9 @@ namespace Ploosqva.ProjectBase.NHibernate
             return (T)nHibernateGenericDao.FindById(typeof(T), id);
         }
         [Transaction(TransactionMode.Requires)]
-        public T Create(T instance)
+        public IdT Create(T instance)
         {
-            return (T)nHibernateGenericDao.Create(instance);
+            return (IdT)nHibernateGenericDao.Create(instance);
         }
         [Transaction(TransactionMode.Requires)]
         public void Update(T instance)

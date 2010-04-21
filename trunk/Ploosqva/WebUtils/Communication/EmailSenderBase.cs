@@ -4,7 +4,7 @@ using System.Net.Mail;
 
 namespace Ploosqva.WebUtils.Communication
 {
-    public abstract class EmailSenderBase : IMessageSender
+    public abstract class EmailSenderBase : IEmailSender
     {
         protected SmtpClient smtpClient;
         protected string lastExceptionMessage;
