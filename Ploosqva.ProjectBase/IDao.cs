@@ -8,7 +8,7 @@ namespace Ploosqva.ProjectBase
         IList<T> FindAll();
         IList<T> FindAll(int firstRow, int maxRows);
         T FindById(IdT id);
-        T Create(T instance);
+        IdT Create(T instance);
         void Update(T instance);
         void Delete(T instance);
         void DeleteAll();

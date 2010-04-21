@@ -92,6 +92,7 @@
     </Compile>
     <Compile Include="Web\HttpApplication.cs" />
     <Compile Include="Web\IDaoFactoryBase.cs" />
+    <Compile Include="Web\PerSessionLifestyleManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ploosqva\Ploosqva.csproj">

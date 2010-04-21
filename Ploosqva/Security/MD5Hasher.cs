@@ -7,13 +7,19 @@ namespace Ploosqva.Security
     ///<summary>
     /// Class used to use MD5 algorithm
     ///</summary>
+#if PocketPC
     public class MD5Hasher
+#else
+    class MD5Hasher : IHashService
+#endif
     {
+        #region Implementation of IHashService
+
         ///<summary>
         /// Hash an input string and return the hash as
         /// a 32 character hexadecimal string.
         ///</summary>
-        public static string GetHash(string input)
+        public string GetHash(string input)
         {
             // Create a new instance of the MD5CryptoServiceProvider object.
             MD5 md5Hasher = MD5.Create();
@@ -39,7 +45,7 @@ namespace Ploosqva.Security
         /// <summary>
         /// Verify a hash against a string.
         /// </summary>
-        public static bool VerifyHash(string input, string hash)
+        public bool VerifyHash(string input, string hash)
         {
             // Hash the input.
             string hashOfInput = GetHash(input);
@@ -49,5 +55,7 @@ namespace Ploosqva.Security
 
             return 0 == comparer.Compare(hashOfInput, hash);
         }
+
+        #endregion
     }
 }
