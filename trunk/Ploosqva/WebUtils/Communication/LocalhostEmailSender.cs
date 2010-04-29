@@ -1,58 +1,37 @@
-﻿using System;
-using System.IO;
-using System.Net.Mail;
+﻿using System.Net.Mail;
 
 namespace Ploosqva.WebUtils.Communication
 {
     /// <summary>
     /// Used to send email via a local IIS SMTP service
     /// </summary>
+    [Castle.Core.Transient]
     public class LocalhostEmailSender : EmailSenderBase
     {
+        private int port = 25;
+
         /// <summary>
-        /// Port used by the smtp server. Default is 25
+        /// SmtpPort used by the smtp server. Default is 25
         /// </summary>
-        public static int port = 25;
+        public int SmtpPort
+        {
+            set
+            {
+                port = value;
+            }
+            get
+            {
+                return port;
+            }
+        }
 
         ///<summary>
         /// Creates a new SmtpClient using localhost and
-        /// port set by static <see cref="port"/> field
+        /// port set by <see cref="SmtpPort"/> property
         ///</summary>
         public LocalhostEmailSender()
         {
             smtpClient = new SmtpClient("localhost", port);
-        }
-
-        public override bool Send(MailMessage msg)
-        {
-            try
-            {
-                smtpClient.Send(msg);
-            }
-            catch (Exception ex)
-            {
-                lastExceptionMessage = ex.Message;
-                lastExceptionStackTrace = ex.StackTrace;
-                return false;
-            }
-
-            return true;
-        }
-
-        public override bool SendWithAttachments(MailMessage msg, Stream[] attachmentStreams)
-        {
-            try
-            {
-                smtpClient.Send(msg);
-            }
-            catch (Exception ex)
-            {
-                lastExceptionMessage = ex.Message;
-                lastExceptionStackTrace = ex.StackTrace;
-                return false;
-            }
-
-            return true;
         }
     }
 }

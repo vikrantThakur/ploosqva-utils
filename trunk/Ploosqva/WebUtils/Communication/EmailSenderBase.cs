@@ -7,49 +7,86 @@ namespace Ploosqva.WebUtils.Communication
     public abstract class EmailSenderBase : IEmailSender
     {
         protected SmtpClient smtpClient;
-        protected string lastExceptionMessage;
-        protected string lastExceptionStackTrace;
+        protected MailMessage message = new MailMessage();
 
-        public string LastExceptionMessage
+        #region Implementation of IEmailSender
+
+        Exception lastException;
+
+        bool isBodyHtml = true;
+
+        public Exception LastException
         {
-            get { return lastExceptionMessage; }
+            get { return lastException; }
         }
 
-        public string LastExceptionStackTrace
-        {
-            get { return lastExceptionStackTrace; }
-        }
-
-        public virtual bool Send(MailMessage msg)
+        public bool Send()
         {
             try
             {
-                smtpClient.Send(msg);
+                smtpClient.Send(message);
             }
             catch (Exception ex)
             {
-                lastExceptionMessage = ex.Message;
-                lastExceptionStackTrace = ex.StackTrace;
+                lastException = ex;
                 return false;
             }
 
             return true;
         }
 
-        public virtual bool SendWithAttachments(MailMessage msg, Stream[] attachmentStreams)
+        public void AddAttachment(Stream attachmentStream, string name, string contentType)
         {
-            try
-            {
-                smtpClient.Send(msg);
-            }
-            catch (Exception ex)
-            {
-                lastExceptionMessage = ex.Message;
-                lastExceptionStackTrace = ex.StackTrace;
-                return false;
-            }
-
-            return true;
+            message.Attachments.Add(new Attachment(attachmentStream, name, contentType));
         }
+
+        public void AddRecipient(string recipientAddress, string recipientName)
+        {
+            message.To.Add(new MailAddress(recipientAddress, recipientName));
+        }
+
+        public string Sender
+        {
+            get
+            {
+                return message.From.Address;
+            }
+            set
+            {
+                message.From = new MailAddress(value);
+            }
+        }
+
+        public string Body
+        {
+            get
+            {
+                return message.Body;
+            }
+            set
+            {
+                message.Body = value;
+            }
+        }
+
+        public bool IsBodyHtml
+        {
+            get { return isBodyHtml; }
+            set { isBodyHtml = value; }
+        }
+
+        public string Subject
+        {
+            get
+            {
+                return message.Subject;
+            }
+            set
+            {
+                message.Subject = value;
+            }
+        }
+
+        #endregion
     }
 }

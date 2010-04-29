@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Db4objects.Db4o;
 
-namespace Ploosqva.DbUtils.Db4o
+namespace Ploosqva.Db4oUtils
 {
     /// <summary>
     /// Allows creation of autmatically incrementing integer field in db4o persisted classes
