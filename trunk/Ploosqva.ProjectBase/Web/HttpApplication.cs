@@ -28,6 +28,16 @@ namespace Ploosqva.ProjectBase.Web
         }
 
         /// <summary>
+        /// Runs WindsorContainer.Resolve(typeof(T))
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static T Component<T>()
+        {
+            return (T)WindsorContainer.Resolve(typeof(T));
+        }
+
+        /// <summary>
         /// Code that runs on application startup
         /// </summary>
         public virtual void Application_Start(object sender, EventArgs e)
