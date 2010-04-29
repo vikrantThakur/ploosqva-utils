@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Castle\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="ImageManipulation, Version=1.0.3242.37438, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\ImageManipulation.dll</HintPath>
@@ -69,9 +73,11 @@
     <Compile Include="Security\DESCryptography.cs" />
     <Compile Include="Security\IHashService.cs" />
     <Compile Include="Security\MD5Hasher.cs" />
+    <Compile Include="Security\RequiredRightsAttribute.cs" />
     <Compile Include="WebUtils\Communication\EmailSenderBase.cs" />
     <Compile Include="WebUtils\Communication\IMessageSender.cs" />
-    <Compile Include="WebUtils\Communication\RemoteEmailSender.cs" />
+    <Compile Include="WebUtils\Communication\NetworkSmtpEmailSender.cs" />
+    <Compile Include="Security\ExtensionMethods.cs" />
     <Compile Include="WebUtils\Handlers\CaptchaImageHandler.cs" />
     <Compile Include="WebUtils\Communication\IEmailSender.cs" />
     <Compile Include="WebUtils\Communication\LocalhostEmailSender.cs" />

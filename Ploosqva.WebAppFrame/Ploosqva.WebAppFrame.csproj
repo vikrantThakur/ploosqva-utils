@@ -60,12 +60,10 @@
     <Compile Include="DbFacade\FacadeBase.cs" />
     <Compile Include="DbFacade\UnloggedUserEventHandler.cs" />
     <Compile Include="DbFacade\UnloggedUserEventArgs.cs" />
-    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="FormsBase\Db4oApplication.cs" />
     <Compile Include="FormsBase\Db4oEnabledPageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FormsBase\RequiredRightsAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

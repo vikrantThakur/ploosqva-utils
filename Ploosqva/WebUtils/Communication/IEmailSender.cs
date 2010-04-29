@@ -1,5 +1,5 @@
-﻿using System.IO;
-using System.Net.Mail;
+﻿using System;
+using System.IO;
 
 namespace Ploosqva.WebUtils.Communication
 {
@@ -11,26 +11,43 @@ namespace Ploosqva.WebUtils.Communication
         /// <summary>
         /// If sending fails, exception message is stored here
         /// </summary>
-        string LastExceptionMessage { get; }
-
-        /// <summary>
-        /// If sending fails, exception stack trace is stored here
-        /// </summary>
-        string LastExceptionStackTrace { get; }
+        Exception LastException { get; }
 
         ///<summary>
         /// Sends an email message
         ///</summary>
         ///<param name="msg">email message to send</param>
         ///<returns>true if sending is successful</returns>
-        bool Send(MailMessage msg);
+        bool Send();
 
         /// <summary>
-        /// Sends a mail message with attachments
+        /// Adds an attachement
         /// </summary>
-        /// <param name="msg">email message to send</param>
-        /// <param name="attachmentStreams">array of attachment streams</param>
-        /// <returns>true if sending is successful</returns>
-        bool SendWithAttachments(MailMessage msg, Stream[] attachmentStreams);
+        void AddAttachment(Stream attachmentStream, string name, string contentType);
+
+        /// <summary>
+        /// Adds a recipient to this email
+        /// </summary>
+        void AddRecipient(string recipientAddress, string recipientName);
+
+        /// <summary>
+        /// Gets or sets email's sender
+        /// </summary>
+        string Sender { set; get; }
+
+        /// <summary>
+        /// Gets or sets email's content
+        /// </summary>
+        string Body { get; set; }
+
+        /// <summary>
+        /// Gets or sets email html
+        /// </summary>
+        bool IsBodyHtml { get; set; }
+
+        ///<summary>
+        /// Gets or sets email's subject
+        ///</summary>
+        string Subject { get; set; }
     }
 }

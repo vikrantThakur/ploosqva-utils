@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Ploosqva.WebAppFrame.FormsBase
+namespace Ploosqva.Security
 {
     ///<summary>
     /// This attribute can be used to decorate objects with required right to access it.

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Reflection;
-using Ploosqva.WebAppFrame.FormsBase;
 
-namespace Ploosqva.WebAppFrame
+namespace Ploosqva.Security
 {
     ///<summary>
     /// Contains extension method, which allow checking, wheather extended objects
