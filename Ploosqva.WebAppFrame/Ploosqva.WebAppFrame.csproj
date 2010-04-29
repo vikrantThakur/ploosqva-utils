@@ -71,6 +71,10 @@
       <Project>{BA581416-47DD-4B50-BDC4-D21BF1CAD0F2}</Project>
       <Name>Ploosqva.Db4oAppFrame</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Ploosqva\Ploosqva.csproj">
+      <Project>{FEBC1D3D-41FC-46D0-91A8-225BA3B0DD51}</Project>
+      <Name>Ploosqva</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

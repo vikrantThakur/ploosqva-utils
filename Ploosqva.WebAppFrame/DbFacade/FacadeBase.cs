@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Web;
 using System.Web.SessionState;
 using Db4objects.Db4o;
-using Db4objects.Db4o.Config;
+using Ploosqva.Security;
 using Ploosqva.WebAppFrame.Database;
 
 namespace Ploosqva.WebAppFrame.DbFacade

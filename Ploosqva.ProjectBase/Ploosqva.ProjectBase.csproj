@@ -84,12 +84,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Web\BasePage.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Web\BaseUserControl.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Web\HttpApplication.cs" />
     <Compile Include="Web\IDaoFactoryBase.cs" />
     <Compile Include="Web\PerSessionLifestyleManager.cs" />
