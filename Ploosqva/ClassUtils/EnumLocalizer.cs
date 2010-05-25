@@ -14,7 +14,7 @@ namespace Ploosqva.ClassUtils
     ///</summary>
     public class EnumLocalizer : EnumConverter
     {
-        private readonly ResourceManager resourceManager;
+        protected readonly ResourceManager resourceManager;
 
         /// <summary>
         /// Creates new instance of EnumLocalizer
@@ -62,16 +62,9 @@ namespace Ploosqva.ClassUtils
         /// via ResourcePathAttribute
         /// </summary>
         /// <returns>Localized set of enum's values</returns>
-        public List<object> GetValues()
+        public IEnumerable GetValues()
         {
-            List<object> values = new List<object>();
-
-            foreach (var value in Enum.GetValues(EnumType))
-            {
-                values.Add(ConvertTo(value, typeof(string)));
-            }
-
-            return values;
+            return Enum.GetValues(EnumType);
         }
 
         /// <summary>
@@ -84,15 +77,15 @@ namespace Ploosqva.ClassUtils
             string resourceKey = null;
 
             var resourceSet = resourceManager.GetResourceSet(
-                Thread.CurrentThread.CurrentUICulture, 
-                true, 
+                Thread.CurrentThread.CurrentUICulture,
+                true,
                 true);
 
             foreach (DictionaryEntry resource in resourceSet)
             {
                 if ((string)resource.Value == text)
                 {
-                    resourceKey = (string) resource.Key;
+                    resourceKey = (string)resource.Key;
                     break;
                 }
             }
@@ -105,7 +98,52 @@ namespace Ploosqva.ClassUtils
         /// </summary>
         public string GetName(object value)
         {
-            return (string) ConvertTo(value, typeof(string));
+            return (string)ConvertTo(value, typeof(string));
+        }
+
+        /// <summary>
+        /// Returns localized strings for all values of the enum type
+        /// </summary>
+        public IEnumerable<string> GetNames()
+        {
+            foreach (var value in GetValues())
+            {
+                yield return GetName(value);
+            }
+        }
+    }
+
+    public class EnumLocalizer<TEnum> : EnumLocalizer
+    {
+        public EnumLocalizer()
+            : base(typeof(TEnum))
+        {
+        }
+
+        /// <summary>
+        /// Gets enum value represented by the string
+        /// </summary>
+        /// <param name="text">enum text</param>
+        /// <returns>enum value</returns>
+        public new TEnum Parse(string text)
+        {
+            string resourceKey = null;
+
+            var resourceSet = resourceManager.GetResourceSet(
+                Thread.CurrentThread.CurrentUICulture,
+                true,
+                true);
+
+            foreach (DictionaryEntry resource in resourceSet)
+            {
+                if ((string)resource.Value == text)
+                {
+                    resourceKey = (string)resource.Key;
+                    break;
+                }
+            }
+
+            return (TEnum)Enum.Parse(EnumType, resourceKey);
         }
     }
 }
